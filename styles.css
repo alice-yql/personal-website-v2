@@ -112,20 +112,20 @@ a:focus-visible {
 }
 
 .site-viewer-tracker-eye {
-  flex: 0 0 27px;
-  width: 27px;
-  height: 27px;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
   fill: none;
-  stroke: rgb(245, 177, 50);
+  stroke: var(--title-orange);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
 }
 
 .site-viewer-count {
-  color: rgb(245, 177, 50);
-  font-size: 1.25rem;
-  font-weight: 700;
+  color: var(--title-orange);
+  font-size: 1.5rem;
+  font-weight: 800;
   line-height: 1;
 }
 
@@ -305,6 +305,8 @@ a:focus-visible {
   position: absolute;
   display: block;
   width: var(--star-size);
+  height: var(--star-size);
+  aspect-ratio: 1;
   padding: 0;
   border: 0;
   background: transparent;
@@ -317,7 +319,8 @@ a:focus-visible {
 .floating-star img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .floating-star:focus-visible {
@@ -1329,13 +1332,13 @@ h1 {
   }
 
   .site-viewer-tracker-eye {
-    flex-basis: 22px;
-    width: 22px;
-    height: 22px;
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
   }
 
   .site-viewer-count {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .icon-group {
