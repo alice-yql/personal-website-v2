@@ -642,10 +642,19 @@ h1 {
   gap: clamp(0.75rem, 4vw, 2.5rem);
 }
 
+.dish-card {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
 .dish-button {
   display: grid;
   justify-items: center;
   gap: 0.65rem;
+  width: 100%;
   min-width: 0;
   padding: 0;
   border: 0;
@@ -654,6 +663,12 @@ h1 {
   cursor: pointer;
   font: inherit;
   text-align: center;
+}
+
+.dish-cart-button {
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
 }
 
 .dish-art {
@@ -1259,6 +1274,13 @@ h1 {
 
   .dish-hint {
     font-size: 0.7rem;
+  }
+
+  .dish-cart-button {
+    min-height: 44px;
+    padding: 0.55rem 0.3rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   .contact {

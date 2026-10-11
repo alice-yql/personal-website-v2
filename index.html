@@ -111,7 +111,7 @@
                 <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
               </button>
             </div>
-            <img class="about-image" src="assets/alice-po.jpg" alt="Alice">
+            <img class="about-image" src="assets/alice-po.jpg" alt="it's a me! alice :D">
             <div class="about-content">
               <h2 id="about-title" class="about-title">
                 <img src="assets/decorations/about-me-text.PNG" alt="About me">
@@ -158,30 +158,39 @@
             <span class="section-label">pick n' choose your fav dish!</span>
           </div>
           <div class="dish-grid">
-            <button class="dish-button" type="button" data-dialog="projects-dialog" aria-haspopup="dialog">
-              <span class="dish-art dish-art--kimchi">
-                <img class="dish-art-closed" src="assets/kimchi-projects.PNG" alt="">
-                <img class="dish-art-open" src="assets/kimchi-projects-open.PNG" alt="">
-              </span>
-              <span class="dish-name">Projects</span>
-              <span class="dish-hint">A jar of things I’ve made</span>
-            </button>
-            <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
-              <span class="dish-art dish-art--experiences">
-                <img class="dish-art-closed" src="assets/sushi-experience.PNG" alt="">
-                <img class="dish-art-open" src="assets/sushi-experience-open.PNG" alt="">
-              </span>
-              <span class="dish-name">Experiences</span>
-              <span class="dish-hint">A platter of experiences</span>
-            </button>
-            <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
-              <span class="dish-art dish-art--interests">
-                <img class="dish-art-closed" src="assets/ramen-interests.svg" alt="">
-                <img class="dish-art-open" src="assets/ramen-interests-open.svg" alt="">
-              </span>
-              <span class="dish-name">Interests</span>
-              <span class="dish-hint">Coming soon</span>
-            </button>
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="projects-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--kimchi">
+                  <img class="dish-art-closed" src="assets/kimchi-projects.PNG" alt="">
+                  <img class="dish-art-open" src="assets/kimchi-projects-open.PNG" alt="">
+                </span>
+                <span class="dish-name">Projects</span>
+                <span class="dish-hint">A jar of things I’ve made</span>
+              </button>
+              <button class="resume-button dish-cart-button" type="button" data-cart-item="Projects">add to cart!</button>
+            </article>
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--experiences">
+                  <img class="dish-art-closed" src="assets/sushi-experience.PNG" alt="">
+                  <img class="dish-art-open" src="assets/sushi-experience-open.PNG" alt="">
+                </span>
+                <span class="dish-name">Experiences</span>
+                <span class="dish-hint">A platter of experiences</span>
+              </button>
+              <button class="resume-button dish-cart-button" type="button" data-cart-item="Experiences">add to cart!</button>
+            </article>
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--interests">
+                  <img class="dish-art-closed" src="assets/ramen-interests.svg" alt="">
+                  <img class="dish-art-open" src="assets/ramen-interests-open.svg" alt="">
+                </span>
+                <span class="dish-name">Interests</span>
+                <span class="dish-hint">Coming soon</span>
+              </button>
+              <button class="resume-button dish-cart-button" type="button" data-cart-item="Interests">add to cart!</button>
+            </article>
           </div>
         </section>
 
@@ -193,11 +202,7 @@
           </div>
           <div class="checkout-card" aria-label="Cafe checkout">
             <p class="checkout-label">your checkout</p>
-            <div class="checkout-order">
-              <span>1 ×</span>
-              <span>friendly hello</span>
-              <span aria-hidden="true">♡</span>
-            </div>
+            <div class="checkout-receipt" aria-live="polite" aria-relevant="additions text"></div>
             <a class="contact-button" href="mailto:lianga37@mcmaster.ca">
               <span>send your note</span>
               <span aria-hidden="true">↗</span>
@@ -453,6 +458,41 @@
         button.addEventListener("click", () => {
           button.closest(".site-menu")?.removeAttribute("open");
           document.getElementById(button.dataset.dialog).showModal();
+        });
+      });
+
+      const checkoutReceipt = document.querySelector(".checkout-receipt");
+      document.querySelectorAll(".dish-cart-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.dataset.cartItem;
+          const existingRow = [...checkoutReceipt.querySelectorAll("[data-receipt-item]")]
+            .find((row) => row.dataset.receiptItem === item);
+
+          if (existingRow) {
+            const quantity = Number(existingRow.dataset.quantity) + 1;
+            existingRow.dataset.quantity = String(quantity);
+            existingRow.querySelector(".checkout-quantity").textContent = `${quantity} ×`;
+            return;
+          }
+
+          const row = document.createElement("div");
+          row.className = "checkout-order";
+          row.dataset.receiptItem = item;
+          row.dataset.quantity = "1";
+
+          const quantity = document.createElement("span");
+          quantity.className = "checkout-quantity";
+          quantity.textContent = "1 ×";
+
+          const name = document.createElement("span");
+          name.textContent = item;
+
+          const heart = document.createElement("span");
+          heart.setAttribute("aria-hidden", "true");
+          heart.textContent = "♡";
+
+          row.append(quantity, name, heart);
+          checkoutReceipt.append(row);
         });
       });
 
