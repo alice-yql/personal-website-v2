@@ -60,21 +60,33 @@
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
             <!-- <p class="eyebrow">A small corner of the internet · est. 2026</p> -->
+            <div class="star-field star-field--title" aria-hidden="true">
+              <img class="floating-star floating-star--title-1 star-blue" src="assets/star-blue1.PNG" alt="">
+              <img class="floating-star floating-star--title-2 star-yellow" src="assets/star-yellow1.PNG" alt="">
+              <img class="floating-star floating-star--title-3 star-blue" src="assets/star-blue1.PNG" alt="">
+            </div>
             <h1 id="hero-title">
-              <img class="hero-title-image" src="assets/titlepage1.PNG" alt="Website title artwork">
+              <img class="hero-title-image" src="assets/title-portfolio1.PNG" alt="Website title artwork">
             </h1>
           </div>
           <section class="about-preview" id="about" aria-labelledby="about-title">
-            <img class="about-image" src="assets/Ramen.svg" alt="Hand-drawn ramen illustration">
+            <div class="star-field star-field--about" aria-hidden="true">
+              <img class="floating-star floating-star--about-1 star-yellow" src="assets/star-yellow1.PNG" alt="">
+              <img class="floating-star floating-star--about-2 star-blue" src="assets/star-blue1.PNG" alt="">
+              <img class="floating-star floating-star--about-3 star-yellow" src="assets/star-yellow1.PNG" alt="">
+            </div>
+            <img class="about-image" src="assets/alice-po.jpg" alt="Alice">
             <div class="about-content">
-              <h2 id="about-title">about the owner!</h2>
+              <h2 id="about-title" class="about-title">
+                <img src="assets/about-me-text.PNG" alt="About me">
+              </h2>
               <a class="resume-button" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">resume!</a>
               <p class="about-description">
                hey! i'm alice, an electrical engineering student @ mcmaster university. thanks for stopping by my cafe!
               </p>
               <p class="about-description">
                 <em>add-ons:</em><br>
-                <span aria-hidden="true">&#x1F336;&#xFE0F; &#x1F336;&#xFE0F; &#x1F336;&#xFE0F;</span>
+                <span aria-hidden="true">&#x1F336;&#xFE0F;</span>
                 minor in business<br>
                 <span aria-hidden="true">&#x1F96C;&#xFE0F;</span>
                 concurrent certificate in sustainability
@@ -103,9 +115,11 @@
           <div class="section-heading">
             <div>
               <!-- <p class="section-label">A little bit of everything</p> -->
-              <h2 id="work-title">Menu</h2>
+              <h2 id="work-title" class="work-title">
+                <img src="assets/main-course-text.PNG" alt="Main course">
+              </h2>
             </div>
-            <span class="section-label">Pick a dish to take a closer look</span>
+            <span class="section-label">pick n' choose your fav dish!</span>
           </div>
           <div class="dish-grid">
             <button class="dish-button" type="button" data-dialog="projects-dialog" aria-haspopup="dialog">
@@ -125,8 +139,9 @@
               <span class="dish-hint">A platter of experiences</span>
             </button>
             <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
-              <span class="dish-art dish-art--interests" aria-hidden="true">
-                <span class="placeholder-dish placeholder-dish--interests"></span>
+              <span class="dish-art dish-art--interests">
+                <img class="dish-art-closed" src="assets/ramen-interests.svg" alt="">
+                <img class="dish-art-open" src="assets/ramen-interests-open.svg" alt="">
               </span>
               <span class="dish-name">Interests</span>
               <span class="dish-hint">Coming soon</span>
@@ -205,6 +220,7 @@
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Interests window">×</button>
       </form>
+      <img class="dialog-kimchi" src="assets/ramen-interests-open.svg" alt="An open bowl of ramen">
       <h2 id="interests-dialog-title">Interests</h2>
       <p>This dish is still being prepared. Check back soon!</p>
     </dialog>
