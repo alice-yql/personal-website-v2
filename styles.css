@@ -304,6 +304,38 @@ a:focus-visible {
   --float-duration: 4.8s;
 }
 
+.floating-star--title-4 {
+  top: 3%;
+  right: 32%;
+  --star-size: 42px;
+  --float-delay: -2.2s;
+  --float-duration: 5.5s;
+}
+
+.floating-star--title-5 {
+  top: 68%;
+  left: 3%;
+  --star-size: 36px;
+  --float-delay: -4s;
+  --float-duration: 6s;
+}
+
+.floating-star--title-6 {
+  right: 2%;
+  bottom: 6%;
+  --star-size: 54px;
+  --float-delay: -1.2s;
+  --float-duration: 5.1s;
+}
+
+.floating-star--title-7 {
+  top: 76%;
+  right: 24%;
+  --star-size: 32px;
+  --float-delay: -3.4s;
+  --float-duration: 4.7s;
+}
+
 @keyframes star-float {
   0%,
   100% {
@@ -936,6 +968,30 @@ h1 {
     bottom: -34px;
     left: 18%;
     --star-size: 32px;
+  }
+
+  .floating-star--title-4 {
+    top: -26px;
+    right: 34%;
+    --star-size: 32px;
+  }
+
+  .floating-star--title-5 {
+    top: 67%;
+    left: 1%;
+    --star-size: 28px;
+  }
+
+  .floating-star--title-6 {
+    right: 1%;
+    bottom: 6%;
+    --star-size: 34px;
+  }
+
+  .floating-star--title-7 {
+    top: 79%;
+    right: 22%;
+    --star-size: 26px;
   }
 
   .floating-star--about-1 {
