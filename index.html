@@ -34,6 +34,16 @@
             <a href="#contact">contact</a>
           </nav>
         </details>
+
+        <!-- site tracker -->
+        <div class="site-viewer-tracker" role="img" aria-label="Site view count">
+          <svg class="site-viewer-tracker-eye" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path>
+            <circle cx="12" cy="12" r="2.5"></circle>
+          </svg>
+          <span class="site-viewer-count" role="status" aria-label="Loading site view count" aria-live="polite">...</span>
+        </div>
+
         <div class="icon-group" role="group" aria-label="Quick actions coming soon">
           <span class="icon-group-item" role="img" aria-label="Shopping cart">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -56,33 +66,55 @@
           </span>
         </div>
       </div>
+
+
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
             <!-- <p class="eyebrow">A small corner of the internet · est. 2026</p> -->
-            <div class="star-field star-field--title" aria-hidden="true">
-              <img class="floating-star floating-star--title-1 star-blue" src="assets/star-blue1.PNG" alt="">
-              <img class="floating-star floating-star--title-2 star-yellow" src="assets/star-yellow1.PNG" alt="">
-              <img class="floating-star floating-star--title-3 star-blue" src="assets/star-blue1.PNG" alt="">
-              <img class="floating-star floating-star--title-4 star-blue" src="assets/star-blue1.PNG" alt="">
-              <img class="floating-star floating-star--title-5 star-yellow" src="assets/star-yellow1.PNG" alt="">
-              <img class="floating-star floating-star--title-6 star-yellow" src="assets/star-yellow1.PNG" alt="">
-              <img class="floating-star floating-star--title-7 star-blue" src="assets/star-blue1.PNG" alt="">
+            <div class="star-field star-field--title" role="group" aria-label="Floating stars. Focus or hover over a star for a cute message.">
+              <button class="floating-star floating-star--title-1 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-2 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-3 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-4 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-5 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-6 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-7 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
             </div>
             <h1 id="hero-title">
-              <img class="hero-title-image" src="assets/title-portfolio1.PNG" alt="Website title artwork">
+              <img class="hero-title-image" src="assets/decorations/title-portfolio1.PNG" alt="Website title artwork">
             </h1>
           </div>
           <section class="about-preview" id="about" aria-labelledby="about-title">
-            <div class="star-field star-field--about" aria-hidden="true">
-              <img class="floating-star floating-star--about-1 star-yellow" src="assets/star-yellow1.PNG" alt="">
-              <img class="floating-star floating-star--about-2 star-blue" src="assets/star-blue1.PNG" alt="">
-              <img class="floating-star floating-star--about-3 star-yellow" src="assets/star-yellow1.PNG" alt="">
+            <div class="star-field star-field--about" role="group" aria-label="Floating stars. Focus or hover over a star for a cute message.">
+              <button class="floating-star floating-star--about-1 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--about-2 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--about-3 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
             </div>
             <img class="about-image" src="assets/alice-po.jpg" alt="Alice">
             <div class="about-content">
               <h2 id="about-title" class="about-title">
-                <img src="assets/about-me-text.PNG" alt="About me">
+                <img src="assets/decorations/about-me-text.PNG" alt="About me">
               </h2>
               <a class="resume-button" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">resume!</a>
               <p class="about-description">
@@ -120,7 +152,7 @@
             <div>
               <!-- <p class="section-label">A little bit of everything</p> -->
               <h2 id="work-title" class="work-title">
-                <img src="assets/main-course-text.PNG" alt="Main course">
+                <img src="assets/decorations/main-course-text.PNG" alt="Main course">
               </h2>
             </div>
             <span class="section-label">pick n' choose your fav dish!</span>
@@ -212,13 +244,128 @@
         </article>
       </div>
     </dialog>
-    <dialog class="dish-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
+    <dialog class="dish-dialog experiences-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Experiences window">×</button>
       </form>
-      <img class="dialog-kimchi" src="assets/sushi-experience-open.PNG" alt="Open sushi platter">
       <h2 id="experiences-dialog-title">Experiences</h2>
-      <p>A platter of experiences. More details coming soon!</p>
+      <div class="experience-tabs" role="tablist" aria-label="Experience type">
+        <button id="work-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="true" aria-controls="work-experience-panel" tabindex="0">Work Experience</button>
+        <button id="extracurricular-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="false" aria-controls="extracurricular-experience-panel" tabindex="-1">Extracurricular Experience</button>
+      </div>
+      <section id="work-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="work-experience-tab" tabindex="0">
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--teaching" aria-hidden="true">
+            <span>📚</span><small>teach &amp; learn</small>
+          </div>
+          <div class="experience-info">
+            <h3>SUSTAIN 1S03: Introduction to Sustainability Teaching Assistant</h3>
+            <p class="experience-company">McMaster iLead Office · Hamilton, ON</p>
+            <ul>
+              <li>Lead tutorials and discussions for 1,000+ students, supporting <strong>ESG integration</strong>, report writing, and research.</li>
+              <li>Teach the value and impact of sustainability initiatives, including <strong>decarbonization</strong> and embodied-carbon <strong>life-cycle assessment (LCA)</strong> reports.</li>
+              <li>Grade 300+ written assignments and provide timely attendance and report feedback.</li>
+            </ul>
+            <p class="experience-date">Jul. 2026 – Present</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--engineering" aria-hidden="true">
+            <span>⚙️</span><small>build &amp; create</small>
+          </div>
+          <div class="experience-info">
+            <h3>ENGINEER 1P13: Integrated Cornerstone Design Projects in Engineering Teaching Assistant</h3>
+            <p class="experience-company">McMaster University Faculty of Engineering · Hamilton, ON</p>
+            <ul>
+              <li>Guide first-year engineering students in <strong>Autodesk Inventor</strong>, <strong>Python</strong>, Q-arm, and 3D-printing manufacturing.</li>
+              <li>Grade 50+ project deliverables and reports, providing feedback using <strong>Word</strong> and <strong>Excel</strong>.</li>
+              <li>Manage attendance for 100+ students and support group engagement in design projects.</li>
+            </ul>
+            <p class="experience-date">Jul. 2025 – Present</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--shad" aria-hidden="true">
+            <span>🛠️</span><small>make it happen</small>
+          </div>
+          <div class="experience-info">
+            <h3>Engineering Program Facilitator</h3>
+            <p class="experience-company">Shad Canada · Lethbridge, AB</p>
+            <ul>
+              <li>Designed and delivered hands-on workshops introducing students to the <strong>engineering design process</strong>.</li>
+              <li>Mentored project groups of 20+ participants; one team won Best Application of Theme with an <strong>Arduino</strong> prototype.</li>
+              <li>Monitored participant engagement and consulted Program Directors about concerns.</li>
+            </ul>
+            <p class="experience-date">Jun. 2026 – Aug. 2026</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--blockchain" aria-hidden="true">
+            <span>🔗</span><small>secure by design</small>
+          </div>
+          <div class="experience-info">
+            <h3>Software Development Blockchain Intern</h3>
+            <p class="experience-company">Community of Guardians · London, ON</p>
+            <ul>
+              <li>Build blockchain-based verification systems aligned with the <strong>United Nations Sustainable Development Goals (UNSDGs)</strong>.</li>
+              <li>Use <strong>Git</strong> and <strong>GitHub</strong> to implement blockchain security and maintain documentation.</li>
+              <li>Hash data to a public blockchain by deploying a minimal smart contract to <strong>Sepolia</strong>.</li>
+            </ul>
+            <p class="experience-date">Jan. 2026 – Apr. 2026</p>
+          </div>
+        </article>
+      </div>
+      </section>
+      <section id="extracurricular-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="extracurricular-experience-tab" tabindex="0" hidden>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--leadership" aria-hidden="true">
+            <span>🌿</span><small>people &amp; purpose</small>
+          </div>
+          <div class="experience-info">
+            <h3>Vice President, Student Life <span>(previously Director of Sustainability)</span></h3>
+            <p class="experience-company">McMaster Engineering Society · Hamilton, ON</p>
+            <ul>
+              <li>Manage and recruit a portfolio of 10 directors and coordinators in a fast-paced, team-oriented environment.</li>
+              <li>Plan school-wide social events and build relationships with other faculties and departments.</li>
+              <li>Develop financial plans within a <strong>$60,000+ budget</strong>, including room bookings and material costs.</li>
+            </ul>
+            <p class="experience-date">Mar. 2026 – Present</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--events" aria-hidden="true">
+            <span>🎟️</span><small>bring people together</small>
+          </div>
+          <div class="experience-info">
+            <h3>Vice President, Attendee Relations <span>(previously Logistics)</span></h3>
+            <p class="experience-company">DeltaHacks · Hamilton, ON</p>
+            <ul>
+              <li>Evaluate <strong>1,700+ hacker applications</strong> to build a diverse, qualified attendee group.</li>
+              <li>Lead weekly team meetings, communicate objectives, and keep project timelines on track.</li>
+              <li>Support participants at help desks, streamlining check-in and troubleshooting technical issues.</li>
+            </ul>
+            <p class="experience-date">Aug. 2024 – Present</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--robotics" aria-hidden="true">
+            <span>🤖</span><small>design &amp; iterate</small>
+          </div>
+          <div class="experience-info">
+            <h3>CAD Subteam Member</h3>
+            <p class="experience-company">First Robotics Canada Team 7902 · Markham, ON</p>
+            <ul>
+              <li>Engineered drivetrain and intake systems in <strong>SolidWorks</strong>, including chassis, bearings, and motors.</li>
+              <li>Evaluated material quality for robot manufacturing.</li>
+              <li>Worked with mentors and teammates to troubleshoot and adapt to game-plan changes.</li>
+            </ul>
+            <p class="experience-date">Sept. 2023 – Mar. 2024</p>
+          </div>
+        </article>
+      </div>
+      </section>
     </dialog>
     <dialog class="dish-dialog" id="interests-dialog" aria-labelledby="interests-dialog-title">
       <form method="dialog">
@@ -228,7 +375,33 @@
       <h2 id="interests-dialog-title">Interests</h2>
       <p>This dish is still being prepared. Check back soon!</p>
     </dialog>
+    <script src="star-messages.js"></script>
     <script>
+      const viewerCount = document.querySelector(".site-viewer-count");
+      const viewerCountUrl = "https://api.visitorbadge.io/api/visitors?path=alice-yql.github.io%2Fpersonal-website-v2&label=&countColor=%23f5b229";
+
+      fetch(viewerCountUrl, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Visitor counter request failed with status ${response.status}.`);
+          }
+          return response.text();
+        })
+        .then((svg) => {
+          const document = new DOMParser().parseFromString(svg, "image/svg+xml");
+          const count = document.querySelector("title")?.textContent?.trim();
+          if (!count || !/^\d+$/.test(count)) {
+            throw new Error("Visitor counter returned an invalid count.");
+          }
+          viewerCount.textContent = count;
+          viewerCount.setAttribute("aria-label", `${count} site views`);
+        })
+        .catch((error) => {
+          viewerCount.textContent = "—";
+          viewerCount.setAttribute("aria-label", "Site view count unavailable");
+          console.error("Unable to load the site view count.", error);
+        });
+
       const cursorGlow = document.querySelector(".cursor-glow");
 
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
@@ -243,6 +416,33 @@
         });
       }
 
+      const starMessages = window.starMessages;
+      if (!Array.isArray(starMessages) || starMessages.length === 0 || starMessages.some((message) => typeof message !== "string" || message.trim() === "")) {
+        throw new Error("star-messages.js must define window.starMessages as a non-empty array of messages.");
+      }
+
+      document.querySelectorAll(".floating-star").forEach((star) => {
+        const bubble = star.querySelector(".star-bubble");
+        const showMessage = () => {
+          const randomIndex = Math.floor(Math.random() * starMessages.length);
+          bubble.textContent = starMessages[randomIndex];
+          star.classList.add("floating-star--message-visible");
+        };
+        const hideMessage = () => {
+          star.classList.remove("floating-star--message-visible");
+        };
+
+        star.addEventListener("pointerenter", showMessage);
+        star.addEventListener("pointerleave", () => {
+          if (!star.matches(":focus")) {
+            hideMessage();
+          }
+        });
+        star.addEventListener("focus", showMessage);
+        star.addEventListener("blur", hideMessage);
+        star.addEventListener("click", showMessage);
+      });
+
       document.querySelectorAll(".menu-panel a").forEach((link) => {
         link.addEventListener("click", () => {
           link.closest(".site-menu").open = false;
@@ -253,6 +453,38 @@
         button.addEventListener("click", () => {
           button.closest(".site-menu")?.removeAttribute("open");
           document.getElementById(button.dataset.dialog).showModal();
+        });
+      });
+
+      const experienceTabs = [...document.querySelectorAll(".experience-tab")];
+
+      experienceTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          experienceTabs.forEach((experienceTab) => {
+            const selected = experienceTab === tab;
+            experienceTab.setAttribute("aria-selected", String(selected));
+            experienceTab.tabIndex = selected ? 0 : -1;
+            document.getElementById(experienceTab.getAttribute("aria-controls")).hidden = !selected;
+          });
+        });
+
+        tab.addEventListener("keydown", (event) => {
+          let nextIndex;
+          if (event.key === "ArrowRight") {
+            nextIndex = (index + 1) % experienceTabs.length;
+          } else if (event.key === "ArrowLeft") {
+            nextIndex = (index - 1 + experienceTabs.length) % experienceTabs.length;
+          } else if (event.key === "Home") {
+            nextIndex = 0;
+          } else if (event.key === "End") {
+            nextIndex = experienceTabs.length - 1;
+          } else {
+            return;
+          }
+
+          event.preventDefault();
+          experienceTabs[nextIndex].click();
+          experienceTabs[nextIndex].focus();
         });
       });
 

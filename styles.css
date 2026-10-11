@@ -85,11 +85,48 @@ a:focus-visible {
 }
 
 .top-controls {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   padding-top: 1rem;
+}
+
+.site-viewer-tracker {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  width: 128px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  place-items: center;
+  padding: 0.3rem 0.5rem;
+  border: 0;
+  background: transparent;
+  transform: translateX(-50%);
+}
+
+.site-viewer-tracker-eye {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: rgb(245, 177, 50);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.site-viewer-count {
+  color: rgb(245, 177, 50);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .site-menu {
@@ -260,7 +297,7 @@ a:focus-visible {
 .star-field {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -268,9 +305,55 @@ a:focus-visible {
   position: absolute;
   display: block;
   width: var(--star-size);
-  height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
   animation: star-float var(--float-duration, 5s) ease-in-out infinite;
   animation-delay: var(--float-delay, 0s);
+  pointer-events: auto;
+}
+
+.floating-star img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.floating-star:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+
+.star-bubble {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 0.65rem);
+  left: 50%;
+  width: max-content;
+  max-width: min(220px, 72vw);
+  padding: 0.55rem 0.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 14px 14px 14px 4px;
+  background: var(--paper);
+  box-shadow: 3px 3px 0 var(--title-yellow);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-4px);
+  transition: opacity 140ms ease, transform 140ms ease, visibility 140ms ease;
+}
+
+.floating-star--message-visible .star-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .star-blue {
@@ -456,7 +539,7 @@ h1 {
   display: block;
   width: min(100%, 360px);
   aspect-ratio: 1;
-  border: 6px solid var(--title-yellow);
+  border: 12px solid var(--title-yellow);
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -644,6 +727,47 @@ h1 {
   text-align: left;
 }
 
+.experiences-dialog {
+  width: min(94vw, 980px);
+  text-align: left;
+}
+
+.experiences-dialog > h2 {
+  text-align: center;
+}
+
+.experience-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-tab {
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.experience-tab[aria-selected="true"] {
+  border-bottom-color: var(--title-orange);
+  color: var(--title-orange);
+}
+
+.experience-tab:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.experience-panel[hidden] {
+  display: none;
+}
+
 .projects-dialog h2 {
   text-align: center;
 }
@@ -745,6 +869,112 @@ h1 {
   font-size: 0.82rem;
   font-weight: 800;
   opacity: 0.7;
+}
+
+.experience-list {
+  display: grid;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.experience-info {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.experience-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.experience-thumbnail {
+  display: flex;
+  flex: 0 0 40%;
+  aspect-ratio: 4 / 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid var(--ink);
+  border-radius: 24px 24px 24px 8px;
+  background-color: #e7b878;
+  background-image: radial-gradient(rgba(41, 41, 31, 0.13) 1px, transparent 1px);
+  background-size: 12px 12px;
+  color: var(--ink);
+}
+
+.experience-thumbnail > span {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1;
+}
+
+.experience-thumbnail small {
+  padding-inline: 0.35rem;
+  font-family: var(--serif);
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-style: italic;
+  text-align: center;
+}
+
+.experience-thumbnail--engineering,
+.experience-thumbnail--robotics {
+  background-color: #d4c7dc;
+}
+
+.experience-thumbnail--shad,
+.experience-thumbnail--events {
+  background-color: #d9e4d1;
+}
+
+.experience-thumbnail--blockchain,
+.experience-thumbnail--leadership {
+  background-color: #f0d4c6;
+}
+
+.experience-info h3 {
+  margin-bottom: 0.4rem;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.15;
+}
+
+.experience-info h3 span {
+  color: var(--muted);
+  font-size: 0.78em;
+  font-weight: 400;
+}
+
+.experience-company {
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.experience-info ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.experience-info strong {
+  color: var(--ink);
+}
+
+.experience-date {
+  margin: 0.85rem 0 0;
+  color: var(--title-orange);
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .dish-dialog::backdrop {
@@ -1053,9 +1283,70 @@ h1 {
     grid-column: 1;
     grid-row: 2;
   }
+
+  .experience-card {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .experience-card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .experience-card .experience-thumbnail {
+    flex: 0 0 auto;
+    width: min(100%, 320px);
+    align-self: center;
+  }
+
+  .experience-card .experience-info {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .experience-tabs {
+    gap: 0;
+  }
+
+  .experience-tab {
+    flex: 1;
+    padding-inline: 0.4rem;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 390px) {
+  .menu-button {
+    min-height: 42px;
+    padding-inline: 0.7rem;
+  }
+
+  .site-viewer-tracker {
+    width: 88px;
+    height: 46px;
+    gap: 0.1rem;
+    padding-inline: 0.2rem;
+  }
+
+  .site-viewer-tracker-eye {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .site-viewer-count {
+    font-size: 1.1rem;
+  }
+
+  .icon-group {
+    min-height: 42px;
+  }
+
+  .icon-group-item {
+    width: 38px;
+    height: 38px;
+  }
+
   .hero {
     padding-top: 3.5rem;
   }
