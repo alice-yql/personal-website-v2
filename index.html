@@ -9,35 +9,59 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell">
-      <details class="site-menu">
-        <summary class="menu-button">
-          <span class="menu-icon" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="top-controls">
+        <details class="site-menu">
+          <summary class="menu-button">
+            <span class="menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span>menu</span>
+          </summary>
+          <nav class="menu-panel" aria-label="Site menu">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <div class="menu-panel-group">
+              <h2 class="menu-panel-heading">main course</h2>
+              <button class="menu-panel-item" type="button" data-dialog="projects-dialog">projects</button>
+              <button class="menu-panel-item" type="button" data-dialog="experiences-dialog">experiences</button>
+              <button class="menu-panel-item" type="button" data-dialog="interests-dialog">interests</button>
+            </div>
+            <a href="#contact">contact</a>
+          </nav>
+        </details>
+        <div class="icon-group" role="group" aria-label="Quick actions coming soon">
+          <span class="icon-group-item" role="img" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+              <circle cx="10" cy="20" r="1.3"></circle>
+              <circle cx="18" cy="20" r="1.3"></circle>
+            </svg>
           </span>
-          <span>menu</span>
-        </summary>
-        <nav class="menu-panel" aria-label="Site menu">
-          <a href="#home">home</a>
-          <a href="#about">about</a>
-          <div class="menu-panel-group">
-            <h2 class="menu-panel-heading">main course</h2>
-            <button class="menu-panel-item" type="button" data-dialog="projects-dialog">projects</button>
-            <button class="menu-panel-item" type="button" data-dialog="experiences-dialog">experiences</button>
-            <button class="menu-panel-item" type="button" data-dialog="interests-dialog">interests</button>
-          </div>
-          <a href="#contact">contact</a>
-        </nav>
-      </details>
+          <span class="icon-group-item" role="img" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+          </span>
+          <span class="icon-group-item" role="img" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+              <path d="M10 21h4"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
             <!-- <p class="eyebrow">A small corner of the internet · est. 2026</p> -->
             <h1 id="hero-title">
-              <img class="hero-title-image" src="assets/WebsiteTitle1.svg" alt="Website title artwork">
+              <img class="hero-title-image" src="assets/titlepage1.PNG" alt="Website title artwork">
             </h1>
           </div>
           <section class="about-preview" id="about" aria-labelledby="about-title">
@@ -125,13 +149,37 @@
         <p>© <span id="year">2026</span> · Thanks for stopping by <span aria-hidden="true">✳</span></p>
       </footer>
     </div>
-    <dialog class="dish-dialog" id="projects-dialog" aria-labelledby="projects-dialog-title">
+    <dialog class="dish-dialog projects-dialog" id="projects-dialog" aria-labelledby="projects-dialog-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Projects window">×</button>
       </form>
-      <img class="dialog-kimchi" src="assets/kimchi-projects-open.PNG" alt="An open jar of kimchi">
       <h2 id="projects-dialog-title">Projects</h2>
-      <p>A little collection of things I’ve made. More details coming soon!</p>
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--bear" aria-hidden="true">
+            <span class="project-thumbnail-icon">🐻</span>
+            <span class="project-thumbnail-caption">a friend who listens</span>
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Hack Western 12 · Hardware Developer · Nov 2025</p>
+            <h3>Bear With Me</h3>
+            <p>Built a plush companion for children with speech development needs using a Raspberry Pi 4, responsive speaker, and microphone. Developed its backend with Python, Pygame, ElevenLabs, and the Microsoft Azure API.</p>
+            <button class="project-link" type="button" disabled>project link coming soon</button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--hocus" aria-hidden="true">
+            <span class="project-thumbnail-icon">🔎</span>
+            <span class="project-thumbnail-caption">small details, in focus</span>
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Integrated Cornerstone Design Projects in Engineering, McMaster · Project Manager · Feb 2024–Apr 2025</p>
+            <h3>Hocus Focus</h3>
+            <p>Led the design of a magnifying tool to support a user with a vision-related need, modeling it in AutoCAD and PrusaSlicer. Coordinated prototyping, fabrication, and quality control through final assembly, then presented at a showcase for 500+ guests.</p>
+            <button class="project-link" type="button" disabled>project link coming soon</button>
+          </div>
+        </article>
+      </div>
     </dialog>
     <dialog class="dish-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
       <form method="dialog">
@@ -149,6 +197,20 @@
       <p>This dish is still being prepared. Check back soon!</p>
     </dialog>
     <script>
+      const cursorGlow = document.querySelector(".cursor-glow");
+
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        document.addEventListener("pointermove", (event) => {
+          cursorGlow.style.setProperty("--cursor-x", `${event.clientX}px`);
+          cursorGlow.style.setProperty("--cursor-y", `${event.clientY}px`);
+          cursorGlow.classList.add("cursor-glow--visible");
+        });
+
+        document.addEventListener("pointerleave", () => {
+          cursorGlow.classList.remove("cursor-glow--visible");
+        });
+      }
+
       document.querySelectorAll(".menu-panel a").forEach((link) => {
         link.addEventListener("click", () => {
           link.closest(".site-menu").open = false;
