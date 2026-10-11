@@ -144,16 +144,14 @@
       }
 
       h1 {
-        max-width: 620px;
+        width: min(100%, 900px);
         margin: 0 auto 1.5rem;
-        font-size: clamp(3.5rem, 8vw, 6.6rem);
-        line-height: 0.98;
-        text-align: center;
       }
 
-      h1 em {
-        color: var(--orange);
-        font-weight: 400;
+      .hero-title-image {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .hero-copy {
@@ -471,10 +469,6 @@
           padding-top: 3.5rem;
         }
 
-        h1 {
-          font-size: 3.3rem;
-        }
-
         .section-heading {
           align-items: flex-start;
           flex-direction: column;
@@ -506,8 +500,10 @@
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
-            <p class="eyebrow">A small corner of the internet · est. 2026</p>
-            <h1 id="hero-title">Hi, I’m <em>Your Name.</em></h1>
+            <!-- <p class="eyebrow">A small corner of the internet · est. 2026</p> -->
+            <h1 id="hero-title">
+              <img class="hero-title-image" src="assets/websitetitletest.svg" alt="Hand-drawn title artwork">
+            </h1>
           </div>
           <!-- Swap this art frame for an image from the assets folder when you're ready. -->
           <div class="hero-art" role="img" aria-label="A warm sun illustration, ready for your own image">
