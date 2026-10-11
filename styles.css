@@ -682,38 +682,117 @@ h1 {
 }
 
 .contact {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-block: 6rem;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-block: 2rem 5rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 2px solid var(--title-orange);
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(245, 178, 41, 0.18), rgba(238, 54, 29, 0.07));
+  box-shadow: 8px 8px 0 rgba(238, 54, 29, 0.16);
 }
 
 .contact h2 {
-  margin-bottom: 0.6rem;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1;
+  max-width: 520px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.98;
 }
 
-.contact p:last-child {
+.contact-copy > p:last-child {
+  max-width: 390px;
   margin-bottom: 0;
   color: var(--muted);
 }
 
-.contact-button {
-  flex: 0 0 auto;
-  padding: 0.9rem 1.2rem;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  font-size: 0.82rem;
+.checkout-card {
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(41, 41, 31, 0.2);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(41, 41, 31, 0.1);
+}
+
+.checkout-card::before,
+.checkout-card::after {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--title-orange);
+  border-radius: 50%;
+  background: #f4f0e6;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.checkout-card::before {
+  left: -10px;
+  clip-path: inset(0 0 0 50%);
+}
+
+.checkout-card::after {
+  right: -10px;
+  clip-path: inset(0 50% 0 0);
+}
+
+.checkout-label {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.checkout-order {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding-block: 1rem;
+  border-block: 1px dashed var(--line);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.checkout-order span:first-child,
+.checkout-order span:last-child {
+  color: var(--title-orange);
   font-weight: 700;
+}
+
+.contact-button {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--title-orange);
+  border-radius: 12px;
+  background: var(--title-yellow);
+  color: var(--title-orange);
+  font-size: 0.95rem;
+  font-weight: 800;
   text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: filter 160ms ease, transform 160ms ease;
 }
 
 .contact-button:hover {
-  background: var(--ink);
-  color: var(--paper);
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+.checkout-email {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 .site-footer {
@@ -763,9 +842,10 @@ h1 {
   }
 
   .contact {
-    align-items: flex-start;
-    flex-direction: column;
-    padding-block: 4.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-block: 1rem 3rem;
+    padding: 1.5rem;
   }
 
   .project-card {
