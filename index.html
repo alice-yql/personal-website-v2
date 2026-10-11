@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4f0e6">
     <meta name="description" content="Welcome to Alice's Cafe!">
-    <title>My corner of the internet :)</title>
+    <title>alice's portfolio cafe</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell">
-      <header class="site-header">
-        <a class="wordmark" href="#home">Your Name<span aria-hidden="true">.</span></a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="#work">Things I make</a>
-          <a href="#about">A little about</a>
-          <a href="#contact">Say hello</a>
+      <details class="site-menu">
+        <summary class="menu-button">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span>menu</span>
+        </summary>
+        <nav class="menu-panel" aria-label="Site menu">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <div class="menu-panel-group">
+            <h2 class="menu-panel-heading">main course</h2>
+            <button class="menu-panel-item" type="button" data-dialog="projects-dialog">projects</button>
+            <button class="menu-panel-item" type="button" data-dialog="experiences-dialog">experiences</button>
+            <button class="menu-panel-item" type="button" data-dialog="interests-dialog">interests</button>
+          </div>
+          <a href="#contact">contact</a>
         </nav>
-      </header>
-
+      </details>
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
@@ -31,18 +43,21 @@
           <section class="about-preview" id="about" aria-labelledby="about-title">
             <img class="about-image" src="assets/Ramen.svg" alt="Hand-drawn ramen illustration">
             <div class="about-content">
-              <h2 id="about-title">About Me.</h2>
-              <a class="resume-button" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">Resume!</a>
+              <h2 id="about-title">about the owner!</h2>
+              <a class="resume-button" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">resume!</a>
               <p class="about-description">
                hey! i'm alice, an electrical engineering student @ mcmaster university. thanks for stopping by my cafe!
               </p>
               <p class="about-description">
-                <em>Add toppings:</em><br>
-                Minor in Business<br>
-                Concurrent Certificate in Sustainability
+                <em>add-ons:</em><br>
+                <span aria-hidden="true">&#x1F336;&#xFE0F; &#x1F336;&#xFE0F; &#x1F336;&#xFE0F;</span>
+                minor in business<br>
+                <span aria-hidden="true">&#x1F96C;&#xFE0F;</span>
+                concurrent certificate in sustainability
               </p>
             </div>
           </section>
+          <!--
           <div class="hero-details">
             <p class="hero-copy">
               I make things, collect little moments, and occasionally remember to write them down.
@@ -50,44 +65,48 @@
             </p>
             <a class="text-link" href="#work">Wander around <span aria-hidden="true">↘</span></a>
           </div>
+          -->
         </section>
 
+        <!--
         <div class="now-strip" aria-label="Current status">
           <span class="spark" aria-hidden="true">✳</span>
           <strong>Currently:</strong>
           <span>making a mess. YOLO lol.</span>
         </div>
-
+        -->
         <section class="work" id="work" aria-labelledby="work-title">
           <div class="section-heading">
             <div>
-              <p class="section-label">Bits &amp; pieces</p>
-              <h2 id="work-title">Things I’ve made</h2>
+              <p class="section-label">A little bit of everything</p>
+              <h2 id="work-title">Menu</h2>
             </div>
-            <span class="section-label">A living collection, 01—03</span>
+            <span class="section-label">Pick a dish to take a closer look</span>
           </div>
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-art project-art--blue" role="img" aria-label="Blue artwork placeholder">
-                <span>Project one</span>
-              </div>
-              <h3>A thing in progress</h3>
-              <p>A few words about something you made, noticed, or loved.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-art project-art--lilac" role="img" aria-label="Lilac artwork placeholder">
-                <span>Project two</span>
-              </div>
-              <h3>Another little idea</h3>
-              <p>Give this space to a project, a photo series, or a side quest.</p>
-            </article>
-            <article class="project-card">
-              <div class="project-art project-art--orange" role="img" aria-label="Orange artwork placeholder">
-                <span>Project three</span>
-              </div>
-              <h3>Something just for fun</h3>
-              <p>It doesn’t have to be finished—or especially important.</p>
-            </article>
+          <div class="dish-grid">
+            <button class="dish-button" type="button" data-dialog="projects-dialog" aria-haspopup="dialog">
+              <span class="dish-art dish-art--kimchi">
+                <img class="dish-art-closed" src="assets/kimchi-projects.PNG" alt="">
+                <img class="dish-art-open" src="assets/kimchi-projects-open.PNG" alt="">
+              </span>
+              <span class="dish-name">Projects</span>
+              <span class="dish-hint">A jar of things I’ve made</span>
+            </button>
+            <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
+              <span class="dish-art dish-art--experiences">
+                <img class="dish-art-closed" src="assets/sushi-experience.PNG" alt="">
+                <img class="dish-art-open" src="assets/sushi-experience-open.PNG" alt="">
+              </span>
+              <span class="dish-name">Experiences</span>
+              <span class="dish-hint">A platter of experiences</span>
+            </button>
+            <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
+              <span class="dish-art dish-art--interests" aria-hidden="true">
+                <span class="placeholder-dish placeholder-dish--interests"></span>
+              </span>
+              <span class="dish-name">Interests</span>
+              <span class="dish-hint">Coming soon</span>
+            </button>
           </div>
         </section>
 
@@ -97,7 +116,7 @@
             <h2 id="contact-title">Say hello.</h2>
             <p>For notes, nice things, and unexpected connections.</p>
           </div>
-          <a class="contact-button" href="mailto:your@email.com">your@email.com <span aria-hidden="true">↗</span></a>
+          <a class="contact-button" href="mailto:lianga37@mcmaster.ca">lianga37@mcmaster.ca <span aria-hidden="true">↗</span></a>
         </section>
       </main>
 
@@ -106,5 +125,61 @@
         <p>© <span id="year">2026</span> · Thanks for stopping by <span aria-hidden="true">✳</span></p>
       </footer>
     </div>
+    <dialog class="dish-dialog" id="projects-dialog" aria-labelledby="projects-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Projects window">×</button>
+      </form>
+      <img class="dialog-kimchi" src="assets/kimchi-projects-open.PNG" alt="An open jar of kimchi">
+      <h2 id="projects-dialog-title">Projects</h2>
+      <p>A little collection of things I’ve made. More details coming soon!</p>
+    </dialog>
+    <dialog class="dish-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Experiences window">×</button>
+      </form>
+      <img class="dialog-kimchi" src="assets/sushi-experience-open.PNG" alt="Open sushi platter">
+      <h2 id="experiences-dialog-title">Experiences</h2>
+      <p>A platter of experiences. More details coming soon!</p>
+    </dialog>
+    <dialog class="dish-dialog" id="interests-dialog" aria-labelledby="interests-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Interests window">×</button>
+      </form>
+      <h2 id="interests-dialog-title">Interests</h2>
+      <p>This dish is still being prepared. Check back soon!</p>
+    </dialog>
+    <script>
+      document.querySelectorAll(".menu-panel a").forEach((link) => {
+        link.addEventListener("click", () => {
+          link.closest(".site-menu").open = false;
+        });
+      });
+
+      document.querySelectorAll(".dish-button, .menu-panel-item").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.closest(".site-menu")?.removeAttribute("open");
+          document.getElementById(button.dataset.dialog).showModal();
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelector(".dish-dialog[open]")?.close();
+        }
+      });
+
+      document.querySelectorAll(".dish-dialog").forEach((dialog) => {
+        dialog.addEventListener("cancel", (event) => {
+          event.preventDefault();
+          dialog.close();
+        });
+
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) {
+            dialog.close();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
