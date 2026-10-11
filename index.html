@@ -106,12 +106,18 @@
       }
 
       .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.12fr) minmax(250px, 0.88fr);
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: clamp(2.5rem, 8vw, 7rem);
+        gap: 2rem;
         min-height: 570px;
         padding-block: 5.5rem;
+      }
+
+      .hero-intro,
+      .hero-details {
+        width: 100%;
+        text-align: center;
       }
 
       .eyebrow,
@@ -139,9 +145,10 @@
 
       h1 {
         max-width: 620px;
-        margin-bottom: 1.5rem;
+        margin: 0 auto 1.5rem;
         font-size: clamp(3.5rem, 8vw, 6.6rem);
         line-height: 0.98;
+        text-align: center;
       }
 
       h1 em {
@@ -151,6 +158,7 @@
 
       .hero-copy {
         max-width: 440px;
+        margin-inline: auto;
         margin-bottom: 1.8rem;
         color: var(--muted);
         font-size: clamp(1rem, 1.8vw, 1.12rem);
@@ -169,7 +177,9 @@
       .hero-art {
         position: relative;
         display: grid;
-        min-height: 340px;
+        width: min(100%, 680px);
+        min-height: clamp(260px, 38vw, 380px);
+        margin-inline: auto;
         place-items: center;
         overflow: hidden;
         border: 1px solid var(--line);
@@ -189,6 +199,10 @@
 
       .hero-art::after {
         width: 240px;
+      }
+
+      .hero-details .text-link {
+        justify-content: center;
       }
 
       .sun {
@@ -410,8 +424,6 @@
         }
 
         .hero {
-          grid-template-columns: 1fr;
-          gap: 2.5rem;
           min-height: 0;
           padding-block: 4.5rem 3rem;
         }
@@ -493,19 +505,21 @@
 
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
-          <div>
+          <div class="hero-intro">
             <p class="eyebrow">A small corner of the internet · est. 2026</p>
             <h1 id="hero-title">Hi, I’m <em>Your Name.</em></h1>
+          </div>
+          <!-- Swap this art frame for an image from the assets folder when you're ready. -->
+          <div class="hero-art" role="img" aria-label="A warm sun illustration, ready for your own image">
+            <span class="sun" aria-hidden="true">✳</span>
+            <span class="art-note">A place for your image</span>
+          </div>
+          <div class="hero-details">
             <p class="hero-copy">
               I make things, collect little moments, and occasionally remember to write them down.
               Welcome to my own patch of the web.
             </p>
             <a class="text-link" href="#work">Wander around <span aria-hidden="true">↘</span></a>
-          </div>
-          <!-- Swap this art frame for an image you add to your assets folder when you're ready. -->
-          <div class="hero-art" role="img" aria-label="A warm sun illustration, ready for your own image">
-            <span class="sun" aria-hidden="true">✳</span>
-            <span class="art-note">A place for your image</span>
           </div>
         </section>
 
