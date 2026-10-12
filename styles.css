@@ -27,8 +27,11 @@ body {
   position: relative;
   margin: 0;
   background-color: var(--paper);
-  background-image: radial-gradient(rgba(41, 41, 31, 0.24) 1.4px, transparent 1.4px);
-  background-size: 14px 14px;
+  background-image: url("assets/beige-texture-background1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--ink);
   font-family: var(--sans);
   line-height: 1.55;
@@ -368,7 +371,7 @@ a:focus-visible {
 }
 
 .floating-star--title-1 {
-  top: 16%;
+  top: 35%;
   left: 9%;
   --float-delay: -1.7s;
   --float-duration: 5.8s;
@@ -532,7 +535,7 @@ h1 {
 
 .floating-star--about-3 {
   right: 12%;
-  bottom: -12px;
+  bottom: -47px;
   --star-size: 36px;
   --float-delay: -3.8s;
   --float-duration: 4.6s;
@@ -556,7 +559,9 @@ h1 {
 }
 
 .about-content h2 {
-  margin-bottom: 1.20rem;
+  position: relative;
+  top: 0.65rem;
+  margin-bottom: 0.65rem;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
 }
@@ -1068,12 +1073,12 @@ h1 {
 
 .about-description {
   max-width: 440px;
-  margin: 1.5rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--muted);
 }
 
 .about-description + .about-description {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .hero-details .hero-copy {
