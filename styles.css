@@ -590,13 +590,15 @@ h1 {
 
 .resume-link-image {
   display: block;
-  width: min(100%, 220px);
+  width: min(100%, 160px);
+  max-width: 160px;
   transition: filter 160ms ease, transform 160ms ease;
 }
 
 .resume-link-image img {
   display: block;
   width: 100%;
+  max-width: 160px;
   height: auto;
 }
 
