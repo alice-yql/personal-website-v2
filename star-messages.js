@@ -6,6 +6,6 @@ window.starMessages = [
   "all the stars aligned for me to meet you here",
   "psst...don't tell the others...but you're my favourite star",
   "she's desperate. pls hire her",
-  "what do you call a popping bike? a pop-cycle",
+  "what do you call a popping bike? a pop-cycle!",
   "smells like updog in here"
 ];

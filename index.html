@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4f0e6">
     <meta name="description" content="Welcome to Alice's Cafe!">
-    <title>alice's portfolio cafe</title>
+    <title>alice's portfolio café!</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -44,34 +44,41 @@
           <span class="site-viewer-count" role="status" aria-label="Loading site view count" aria-live="polite">...</span>
         </div>
 
-        <div class="icon-group" role="group" aria-label="Quick actions coming soon">
-          <span class="icon-group-item" role="img" aria-label="Shopping cart">
+        <nav class="icon-group" aria-label="Quick actions">
+          <a class="icon-group-item" href="#contact" aria-label="Go to checkout">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"></path>
               <circle cx="10" cy="20" r="1.3"></circle>
               <circle cx="18" cy="20" r="1.3"></circle>
             </svg>
-          </span>
-          <span class="icon-group-item" role="img" aria-label="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-              <path d="m4 7 8 6 8-6"></path>
-            </svg>
-          </span>
-          <span class="icon-group-item" role="img" aria-label="Notifications">
+          </a>
+          <details class="inbox-control">
+            <summary class="icon-group-item" aria-label="Open inbox">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </summary>
+            <div class="inbox-panel" aria-labelledby="inbox-title">
+              <h2 id="inbox-title">messages from the universe...</h2>
+              <p class="inbox-empty">explore the stars and thou shall receieve messages in thy inbox!</p>
+              <ul class="inbox-messages" aria-live="polite"></ul>
+            </div>
+          </details>
+          <a class="icon-group-item" href="#about" aria-label="Go to about">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
               <path d="M10 21h4"></path>
             </svg>
-          </span>
-        </div>
+          </a>
+        </nav>
       </div>
 
 
       <main id="main">
         <section class="hero" id="home" aria-labelledby="hero-title">
           <div class="hero-intro">
-            <!-- <p class="eyebrow">A small corner of the internet · est. 2026</p> -->
+          
             <div class="star-field star-field--title" role="group" aria-label="Floating stars. Focus or hover over a star for a cute message.">
               <button class="floating-star floating-star--title-1 star-blue" type="button" aria-label="Show a cute message">
                 <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
@@ -145,25 +152,8 @@
               </p>
             </div>
           </section>
-
-          <!--
-          <div class="hero-details">
-            <p class="hero-copy">
-              I make things, collect little moments, and occasionally remember to write them down.
-              Welcome to my own patch of the web.
-            </p>
-            <a class="text-link" href="#work">Wander around <span aria-hidden="true">↘</span></a>
-          </div>
-          -->
         </section>
 
-        <!--
-        <div class="now-strip" aria-label="Current status">
-          <span class="spark" aria-hidden="true">✳</span>
-          <strong>Currently:</strong>
-          <span>making a mess. YOLO lol.</span>
-        </div>
-        -->
         <section class="work" id="work" aria-labelledby="work-title">
           <div class="section-heading">
             <div>
@@ -220,7 +210,7 @@
         <section class="contact" id="contact" aria-labelledby="contact-title">
           <div class="contact-copy">
             <p class="section-label">one last step...!</p>
-            <h2 id="contact-title">thanks for checking-out [alice's portfolio]!</h2>
+            <h2 id="contact-title">thanks for 'checking out' alice's portfolio!</h2>
             <p>here's your order! take a fortune cookie to go :)</p>
           </div>
           <div class="checkout-card" aria-label="Cafe checkout">
@@ -238,13 +228,13 @@
                 <span aria-hidden="true">♡</span>
               </div>
               <div class="checkout-order" data-receipt-item="Interests" data-quantity="3">
-                <span class="checkout-quantity">1 ×</span>
+                <span class="checkout-quantity">3 ×</span>
                 <span>interests</span>
                 <span aria-hidden="true">♡</span>
               </div>
             </div>
             <a class="contact-button" href="mailto:lianga37@mcmaster.ca">
-              <span>send your note</span>
+              <span>send me an emaili!</span>
               <span aria-hidden="true">↗</span>
             </a>
             <p class="checkout-email">email: lianga37@mcmaster.ca</p>
@@ -259,19 +249,24 @@
               <div class="about-reel-track">
                 <div class="about-reel-set">
 
+                  <img class="about-reel-image" src="assets/about-reel/shad-uleth-fullteam.jpg" alt="Shad ULeth Full Team 2026">
                   <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="Derek's graduation">
                   <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="Cake and cafe">
                   <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="Charlie Puth with friends">
                   <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="having so much fun in logic design">
                   <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="Faculty Frenzy on the grass">
-                
+                  <img class="about-reel-image" src="assets/about-reel/alice-shadbot.jpg" alt="Shadbot on Alice's Head">
+                  
+
                 </div>
 
+                  <img class="about-reel-image" src="assets/about-reel/shad-uleth-fullteam.jpg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="">
                   <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/alice-shadbot.jpg" alt="">
                 
                 </div>
               </div>
@@ -280,9 +275,9 @@
       </main>
 
 
-      <!-- footer :> -->
+      <!-- ========= FOOTER =========== -->
       <footer class="site-footer">
-        <p>made with luv, by alice! all art is human-made :)</p>
+        <p>made with luv, by alice! all art is human-made and hand-drawn :)</p>
         <p>© <span id="year">2026</span> alice liang <span aria-hidden="true"></span></p>
       </footer>
     </div>
@@ -294,6 +289,19 @@
       </form>
       <h2 id="projects-dialog-title">projects</h2>
       <div class="project-list">
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--generalleft">
+            <img src="assets/projects/alice-personal-website-v1-thumbnail.png" alt="Alice's Personal Website, Version 1">
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Personal Project · Jul 2025–Sept 2025</p>
+            <h3>Personal Website v.1</h3>
+            <p>First personal take on web dev! Taught myself HTML, CSS & Javascript in a coding academy and I applied it here. There were a few flexbox 
+              and asset troubles, plus the information is outdated. Thus, V2 (the page you're viewing right now!!) came to be.
+            </p>
+            <a class="project-link" href="https://alice-yql.github.io/Personal-Website-v.1/" target="_blank" rel="noopener noreferrer">view website ↗</a>
+          </div>
+        </article>
         <article class="project-card">
           <div class="project-thumbnail project-thumbnail--bear">
             <img src="assets/projects/bearwithme.jpg" alt="Bear With Me plush companion wearing sunglasses at Hack Western">
@@ -500,235 +508,6 @@
       </div>
     </dialog>
     <script src="star-messages.js"></script>
-    <script>
-      const viewerCount = document.querySelector(".site-viewer-count");
-      const viewerCountUrl = "https://api.visitorbadge.io/api/visitors?path=alice-yql.github.io%2Fpersonal-website-v2&label=&countColor=%23f5b229";
-
-      fetch(viewerCountUrl, { cache: "no-store" })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Visitor counter request failed with status ${response.status}.`);
-          }
-          return response.text();
-        })
-        .then((svg) => {
-          const document = new DOMParser().parseFromString(svg, "image/svg+xml");
-          const count = document.querySelector("title")?.textContent?.trim();
-          if (!count || !/^\d+$/.test(count)) {
-            throw new Error("Visitor counter returned an invalid count.");
-          }
-          viewerCount.textContent = count;
-          viewerCount.setAttribute("aria-label", `${count} site views`);
-        })
-        .catch((error) => {
-          viewerCount.textContent = "—";
-          viewerCount.setAttribute("aria-label", "Site view count unavailable");
-          console.error("Unable to load the site view count.", error);
-        });
-
-      const cursorGlow = document.querySelector(".cursor-glow");
-
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        document.addEventListener("pointermove", (event) => {
-          cursorGlow.style.setProperty("--cursor-x", `${event.clientX}px`);
-          cursorGlow.style.setProperty("--cursor-y", `${event.clientY}px`);
-          cursorGlow.classList.add("cursor-glow--visible");
-        });
-
-        document.addEventListener("pointerleave", () => {
-          cursorGlow.classList.remove("cursor-glow--visible");
-        });
-      }
-
-      const starMessages = window.starMessages;
-      if (!Array.isArray(starMessages) || starMessages.length === 0 || starMessages.some((message) => typeof message !== "string" || message.trim() === "")) {
-        throw new Error("star-messages.js must define window.starMessages as a non-empty array of messages.");
-      }
-
-      const starHint = document.querySelector("#star-hint");
-      const dismissStarHint = () => {
-        starHint.hidden = true;
-      };
-
-      document.querySelectorAll(".star-field .floating-star").forEach((star) => {
-        star.addEventListener("pointerenter", dismissStarHint, { once: true });
-        star.addEventListener("focus", dismissStarHint, { once: true });
-      });
-
-      document.querySelectorAll(".floating-star").forEach((star) => {
-        const bubble = star.querySelector(".star-bubble");
-        const showMessage = () => {
-          const randomIndex = Math.floor(Math.random() * starMessages.length);
-          bubble.textContent = starMessages[randomIndex];
-          star.classList.add("floating-star--message-visible");
-        };
-        const hideMessage = () => {
-          star.classList.remove("floating-star--message-visible");
-        };
-
-        star.addEventListener("pointerenter", showMessage);
-        star.addEventListener("pointerleave", () => {
-          if (!star.matches(":focus")) {
-            hideMessage();
-          }
-        });
-        star.addEventListener("focus", showMessage);
-        star.addEventListener("blur", hideMessage);
-        star.addEventListener("click", showMessage);
-      });
-
-      document.querySelectorAll(".menu-panel a").forEach((link) => {
-        link.addEventListener("click", () => {
-          link.closest(".site-menu").open = false;
-        });
-      });
-
-      document.querySelectorAll(".dish-button, .menu-panel-item").forEach((button) => {
-        button.addEventListener("click", () => {
-          button.closest(".site-menu")?.removeAttribute("open");
-          document.getElementById(button.dataset.dialog).showModal();
-        });
-      });
-
-      const interestCarousel = document.querySelector(".interest-carousel");
-      const interestSlides = [...interestCarousel.querySelectorAll(".interest-slide")];
-      const interestCarouselCount = interestCarousel.querySelector(".interest-carousel-count");
-      let activeInterestSlide = 0;
-
-      const showInterestSlide = (index) => {
-        activeInterestSlide = (index + interestSlides.length) % interestSlides.length;
-        interestSlides.forEach((slide, slideIndex) => {
-          slide.hidden = slideIndex !== activeInterestSlide;
-        });
-        interestCarouselCount.textContent = `${activeInterestSlide + 1} / ${interestSlides.length}`;
-      };
-
-      interestCarousel.querySelectorAll(".interest-carousel-arrow").forEach((button) => {
-        button.addEventListener("click", () => {
-          showInterestSlide(activeInterestSlide + Number(button.dataset.carouselDirection));
-        });
-      });
-
-      interestCarousel.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-          event.preventDefault();
-          showInterestSlide(activeInterestSlide + (event.key === "ArrowRight" ? 1 : -1));
-        }
-      });
-
-      const confettiLayer = document.createElement("div");
-      confettiLayer.className = "cart-confetti-layer";
-      confettiLayer.setAttribute("aria-hidden", "true");
-      document.body.append(confettiLayer);
-
-      const burstConfetti = (button) => {
-        const bounds = button.getBoundingClientRect();
-        const colors = ["#ee361d", "#f5b229", "#536e78", "#c9b9d1"];
-
-        for (let index = 0; index < 18; index += 1) {
-          const piece = document.createElement("span");
-          const angle = Math.random() * Math.PI * 2;
-          const distance = 24 + Math.random() * 52;
-
-          piece.className = "cart-confetti-piece";
-          piece.style.setProperty("--confetti-left", `${bounds.left + bounds.width / 2}px`);
-          piece.style.setProperty("--confetti-top", `${bounds.top + bounds.height / 2}px`);
-          piece.style.setProperty("--confetti-x", `${Math.cos(angle) * distance}px`);
-          piece.style.setProperty("--confetti-y", `${Math.sin(angle) * distance}px`);
-          piece.style.setProperty("--confetti-rotation", `${Math.random() * 540 - 270}deg`);
-          piece.style.setProperty("--confetti-color", colors[index % colors.length]);
-          confettiLayer.append(piece);
-          window.setTimeout(() => piece.remove(), 800);
-        }
-      };
-
-      <!-- checkout counter -->
-      const checkoutReceipt = document.querySelector(".checkout-receipt");
-      document.querySelectorAll(".dish-cart-button").forEach((button) => {
-        button.addEventListener("click", () => {
-          burstConfetti(button);
-          const item = button.dataset.cartItem;
-          const existingRow = [...checkoutReceipt.querySelectorAll("[data-receipt-item]")]
-            .find((row) => row.dataset.receiptItem === item);
-
-          if (existingRow) {
-            const quantity = Number(existingRow.dataset.quantity) + 1;
-            existingRow.dataset.quantity = String(quantity);
-            existingRow.querySelector(".checkout-quantity").textContent = `${quantity} ×`;
-            return;
-          }
-
-          const row = document.createElement("div");
-          row.className = "checkout-order";
-          row.dataset.receiptItem = item;
-          row.dataset.quantity = "1";
-
-          const quantity = document.createElement("span");
-          quantity.className = "checkout-quantity";
-          quantity.textContent = "1 ×";
-
-          const name = document.createElement("span");
-          name.textContent = item;
-
-          const heart = document.createElement("span");
-          heart.setAttribute("aria-hidden", "true");
-          heart.textContent = "♡";
-
-          row.append(quantity, name, heart);
-          checkoutReceipt.append(row);
-        });
-      });
-
-      const experienceTabs = [...document.querySelectorAll(".experience-tab")];
-
-      experienceTabs.forEach((tab, index) => {
-        tab.addEventListener("click", () => {
-          experienceTabs.forEach((experienceTab) => {
-            const selected = experienceTab === tab;
-            experienceTab.setAttribute("aria-selected", String(selected));
-            experienceTab.tabIndex = selected ? 0 : -1;
-            document.getElementById(experienceTab.getAttribute("aria-controls")).hidden = !selected;
-          });
-        });
-
-        tab.addEventListener("keydown", (event) => {
-          let nextIndex;
-          if (event.key === "ArrowRight") {
-            nextIndex = (index + 1) % experienceTabs.length;
-          } else if (event.key === "ArrowLeft") {
-            nextIndex = (index - 1 + experienceTabs.length) % experienceTabs.length;
-          } else if (event.key === "Home") {
-            nextIndex = 0;
-          } else if (event.key === "End") {
-            nextIndex = experienceTabs.length - 1;
-          } else {
-            return;
-          }
-
-          event.preventDefault();
-          experienceTabs[nextIndex].click();
-          experienceTabs[nextIndex].focus();
-        });
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          document.querySelector(".dish-dialog[open]")?.close();
-        }
-      });
-
-      document.querySelectorAll(".dish-dialog").forEach((dialog) => {
-        dialog.addEventListener("cancel", (event) => {
-          event.preventDefault();
-          dialog.close();
-        });
-
-        dialog.addEventListener("click", (event) => {
-          if (event.target === dialog) {
-            dialog.close();
-          }
-        });
-      });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -139,6 +139,8 @@ a:focus-visible {
 }
 
 .icon-group {
+  position: relative;
+  z-index: 3;
   display: inline-flex;
   min-height: 48px;
   align-items: center;
@@ -154,10 +156,88 @@ a:focus-visible {
   width: 48px;
   height: 44px;
   place-items: center;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.icon-group-item + .icon-group-item {
+.icon-group-item + .icon-group-item,
+.icon-group-item + .inbox-control,
+.inbox-control + .icon-group-item {
   border-left: 1px solid currentColor;
+}
+
+.inbox-control {
+  position: relative;
+}
+
+.inbox-control > summary {
+  list-style: none;
+}
+
+.inbox-control > summary::-webkit-details-marker {
+  display: none;
+}
+
+.icon-group-item:hover,
+.inbox-control[open] > summary {
+  background: rgba(238, 54, 29, 0.08);
+}
+
+.icon-group-item:focus-visible,
+.inbox-control > summary:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--ink);
+  outline-offset: -4px;
+}
+
+.inbox-panel {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: -48px;
+  z-index: 4;
+  width: min(320px, calc(100vw - 2rem));
+  max-height: min(60vh, 360px);
+  overflow-y: auto;
+  padding: 1rem;
+  border: 2px solid var(--title-orange);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(41, 41, 31, 0.16);
+  color: var(--ink);
+}
+
+.inbox-panel h2 {
+  margin-bottom: 0.75rem;
+  color: var(--title-orange);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+
+.inbox-empty {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.inbox-empty[hidden] {
+  display: none;
+}
+
+.inbox-messages {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inbox-messages li {
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--line);
+  font-family: var(--serif);
+  font-size: 0.95rem;
 }
 
 .icon-group-item svg {
@@ -958,6 +1038,7 @@ h1 {
   transform: rotate(-2deg);
 }
 
+.project-thumbnail--generalleft,
 .project-thumbnail--hocus {
   border-radius: 8px 24px 24px;
   background-color: #d4c7dc;
@@ -1438,7 +1519,7 @@ h1 {
   gap: clamp(2rem, 6vw, 5rem);
   margin-block: 2rem 5rem;
   padding: clamp(1.5rem, 5vw, 4rem);
-  border: 2px solid var(--title-orange);
+  border: 0;
   border-radius: 32px;
   background: linear-gradient(135deg, rgba(245, 178, 41, 0.18), rgba(238, 54, 29, 0.07));
   box-shadow: 8px 8px 0 rgba(238, 54, 29, 0.16);
@@ -1791,6 +1872,10 @@ h1 {
   .icon-group-item {
     width: 38px;
     height: 38px;
+  }
+
+  .inbox-panel {
+    right: -38px;
   }
 
   .hero {
