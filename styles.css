@@ -588,6 +588,32 @@ h1 {
   transform: translateY(-2px);
 }
 
+.resume-link-image {
+  display: block;
+  width: min(100%, 220px);
+  height: 88px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.resume-link-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resume-link-image:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+.resume-link-image:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+
 .now-strip {
   display: flex;
   flex-wrap: wrap;
