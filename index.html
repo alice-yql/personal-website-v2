@@ -120,17 +120,18 @@
                 <img src="assets/resume-button1.PNG" alt="Resume">
               </a>
               <p class="about-description">
-               hey! i'm alice, an electrical engineering student @ mcmaster university. thanks for stopping by my cafe!
+               hey! i'm alice (she/her), <strong>an electrical engineering student @ mcmaster university.</strong> thanks for stopping by my portfolio!
               </p>
               <p class="about-description">
                 <em>add-ons:</em><br>
                 <span aria-hidden="true">&#x1F336;&#xFE0F;</span>
-                minor in business<br>
+                <strong>minor in business<br>
                 <span aria-hidden="true">&#x1F96C;&#xFE0F;</span>
-                concurrent certificate in sustainability
+                concurrent certificate in sustainability</strong>
               </p>
             </div>
           </section>
+
           <!--
           <div class="hero-details">
             <p class="hero-copy">
@@ -201,28 +202,29 @@
           
         </section>
 
+       <!-- ======= CONTACTS SECTION ======= --> 
         <section class="contact" id="contact" aria-labelledby="contact-title">
           <div class="contact-copy">
-            <p class="section-label">the last course</p>
-            <h2 id="contact-title">Ready to check out?</h2>
-            <p>Thanks for stopping by my little corner of the internet. Leave a note in my inbox!</p>
+            <p class="section-label">one last step...!</p>
+            <h2 id="contact-title">thanks for checking-out [alice's portfolio]!</h2>
+            <p>here's your order! take a fortune cookie to go :)</p>
           </div>
           <div class="checkout-card" aria-label="Cafe checkout">
-            <p class="checkout-label">your checkout</p>
+            <p class="checkout-label">reciept</p>
             <div class="checkout-receipt" aria-live="polite" aria-relevant="additions text">
               <div class="checkout-order" data-receipt-item="Projects" data-quantity="2">
                 <span class="checkout-quantity">2 ×</span>
-                <span>Projects</span>
+                <span>projects</span>
                 <span aria-hidden="true">♡</span>
               </div>
               <div class="checkout-order" data-receipt-item="Experiences" data-quantity="7">
                 <span class="checkout-quantity">7 ×</span>
-                <span>Experiences</span>
+                <span>experiences</span>
                 <span aria-hidden="true">♡</span>
               </div>
               <div class="checkout-order" data-receipt-item="Interests" data-quantity="1">
                 <span class="checkout-quantity">1 ×</span>
-                <span>Interests</span>
+                <span>interests</span>
                 <span aria-hidden="true">♡</span>
               </div>
             </div>
@@ -230,18 +232,53 @@
               <span>send your note</span>
               <span aria-hidden="true">↗</span>
             </a>
-            <p class="checkout-email">lianga37@mcmaster.ca</p>
+            <p class="checkout-email">email: lianga37@mcmaster.ca</p>
           </div>
         </section>
+
+        <!-- for funshies carousel at the footer -->
+          <section class="about-reel" aria-labelledby="about-reel-title">
+            <h2 id="about-reel-title"></h2> <!--title desc if i feel like it-->
+
+            <div class="about-reel-window">
+              <div class="about-reel-track">
+                <div class="about-reel-set">
+                  <div class="about-reel-placeholder about-reel-placeholder--art" role="img" aria-label="Placeholder for art">
+                    <!--art dump1 -->
+                    <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="Cake and cafe">
+                  </div>
+                  <div class="about-reel-placeholder about-reel-placeholder--photos" role="img" aria-label="Placeholder for fun photos">
+                    <!--photo dump1-->
+                  </div>
+                  <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="Derek's graduation">
+                  <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="Charlie Puth with friends">
+                  <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="having so much fun in logic design">
+                </div>
+                  <!--photo dump2-->
+                  <div class="about-reel-placeholder about-reel-placeholder--photos">
+                    <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="">
+                  </div>
+
+                  <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
       </main>
 
+
+      <!-- footer :> -->
       <footer class="site-footer">
         <p>made with luv, by alice! all art is human-made :)</p>
         <p>© <span id="year">2026</span> alice liang studios<span aria-hidden="true"></span></p>
       </footer>
     </div>
 
-    <!---------- projects dialog ------->
+    <!----============== PROJECTS DIALOG ============ -->
     <dialog class="dish-dialog projects-dialog" id="projects-dialog" aria-labelledby="projects-dialog-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Projects window">×</button>
@@ -249,31 +286,31 @@
       <h2 id="projects-dialog-title">projects</h2>
       <div class="project-list">
         <article class="project-card">
-          <div class="project-thumbnail project-thumbnail--bear" aria-hidden="true">
-            <span class="project-thumbnail-icon">🐻</span>
-            <span class="project-thumbnail-caption">a friend who listens</span>
+          <div class="project-thumbnail project-thumbnail--bear">
+            <img src="assets/projects/bearwithme.jpg" alt="Bear With Me plush companion wearing sunglasses at Hack Western">
           </div>
           <div class="project-info">
             <p class="project-meta">Hack Western 12 · Hardware Developer · Nov 2025</p>
             <h3>Bear With Me</h3>
             <p>Built a plush companion for children with speech development needs using a Raspberry Pi 4, responsive speaker, and microphone. Developed its backend with Python, Pygame, ElevenLabs, and the Microsoft Azure API.</p>
-            <button class="project-link" type="button" disabled>project link coming soon</button>
+            <a class="project-link" href="https://devpost.com/software/bear-with-me-pg9e02" target="_blank" rel="noopener noreferrer">view devpost ↗</a>
           </div>
         </article>
         <article class="project-card">
-          <div class="project-thumbnail project-thumbnail--hocus" aria-hidden="true">
-            <span class="project-thumbnail-icon">🔎</span>
-            <span class="project-thumbnail-caption">small details, in focus</span>
+          <div class="project-thumbnail project-thumbnail--hocus">
+            <img src="assets/projects/1p13projects.png" alt="Hocus Focus engineering design project prototype">
           </div>
           <div class="project-info">
             <p class="project-meta">Integrated Cornerstone Design Projects in Engineering, McMaster · Project Manager · Feb 2024–Apr 2025</p>
             <h3>Hocus Focus</h3>
             <p>Led the design of a magnifying tool to support a user with a vision-related need, modeling it in AutoCAD and PrusaSlicer. Coordinated prototyping, fabrication, and quality control through final assembly, then presented at a showcase for 500+ guests.</p>
-            <button class="project-link" type="button" disabled>project link coming soon</button>
+            <a class="project-link" href="https://learning-portfolio-2425.notion.site/Project-Three-Power-in-Community-16e63b6970f48182ab1ef8810d00e5f0?pvs=143" target="_blank" rel="noopener noreferrer">view project ↗</a>
           </div>
         </article>
       </div>
     </dialog>
+
+    <!-- ========= EXPERIENCES SUBPAGE ========= -->
     <dialog class="dish-dialog experiences-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Experiences window">×</button>
@@ -281,29 +318,34 @@
 
       <h2 id="experiences-dialog-title">experiences</h2>
       <div class="experience-tabs" role="tablist" aria-label="Experience type">
+        <button id="extracurricular-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="false" aria-controls="extracurricular-experience-panel" tabindex="-1">extracurriculars!</button>
         <button id="work-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="true" aria-controls="work-experience-panel" tabindex="0">work!</button>
-        <button id="extracurricular-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="false" aria-controls="extracurricular-experience-panel" tabindex="-1">extracurricular!</button>
+        
       </div>
+
+      <!--work experience subpage-->
       <section id="work-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="work-experience-tab" tabindex="0">
       <div class="experience-list">
+        
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--teaching" aria-hidden="true">
-            <span>📚</span><small>teach &amp; learn</small>
+          <div class="experience-thumbnail experience-thumbnail--blockchain">
+            <img src="assets/experiences/cogs-logo.jpg" alt="Community of Guardians Logo">
           </div>
           <div class="experience-info">
-            <h3>SUSTAIN 1S03: Introduction to Sustainability Teaching Assistant</h3>
-            <p class="experience-company">McMaster iLead Office · Hamilton, ON</p>
+            <h3>Software Development Blockchain Intern</h3>
+            <p class="experience-company">Community of Guardians · London, ON</p>
             <ul>
-              <li>Lead tutorials and discussions for 1,000+ students, supporting <strong>ESG integration</strong>, report writing, and research.</li>
-              <li>Teach the value and impact of sustainability initiatives, including <strong>decarbonization</strong> and embodied-carbon <strong>life-cycle assessment (LCA)</strong> reports.</li>
-              <li>Grade 300+ written assignments and provide timely attendance and report feedback.</li>
+              <li>Build blockchain-based verification systems aligned with the <strong>United Nations Sustainable Development Goals (UNSDGs)</strong>.</li>
+              <li>Use <strong>Git</strong> and <strong>GitHub</strong> to implement blockchain security and maintain documentation.</li>
+              <li>Hash data to a public blockchain by deploying a minimal smart contract to <strong>Sepolia</strong>.</li>
             </ul>
-            <p class="experience-date">Jul. 2026 – Present</p>
+            <p class="experience-date">Jan. 2026 – Apr. 2026</p>
           </div>
         </article>
+
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--engineering" aria-hidden="true">
-            <span>⚙️</span><small>build &amp; create</small>
+          <div class="experience-thumbnail experience-thumbnail--engineering">
+              <img src="assets/experiences/1P13-showcase-2025-news-header.jpg" alt="1p13 showcase">
           </div>
           <div class="experience-info">
             <h3>ENGINEER 1P13: Integrated Cornerstone Design Projects in Engineering Teaching Assistant</h3>
@@ -317,8 +359,8 @@
           </div>
         </article>
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--shad" aria-hidden="true">
-            <span>🛠️</span><small>make it happen</small>
+          <div class="experience-thumbnail experience-thumbnail--shad">
+                <img src="assets/experiences/shad-designday.jpeg" alt="Shad ULeth Design Day">
           </div>
           <div class="experience-info">
             <h3>Engineering Program Facilitator</h3>
@@ -331,29 +373,32 @@
             <p class="experience-date">Jun. 2026 – Aug. 2026</p>
           </div>
         </article>
-        <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--blockchain" aria-hidden="true">
-            <span>🔗</span><small>secure by design</small>
+
+         <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--teaching">
+            <img src="assets/experiences/sustain-tree-planting.png" alt="Tree planting for SUSTAIN">
           </div>
           <div class="experience-info">
-            <h3>Software Development Blockchain Intern</h3>
-            <p class="experience-company">Community of Guardians · London, ON</p>
+            <h3>SUSTAIN 1S03: Introduction to Sustainability Teaching Assistant</h3>
+            <p class="experience-company">McMaster iLead Office · Hamilton, ON</p>
             <ul>
-              <li>Build blockchain-based verification systems aligned with the <strong>United Nations Sustainable Development Goals (UNSDGs)</strong>.</li>
-              <li>Use <strong>Git</strong> and <strong>GitHub</strong> to implement blockchain security and maintain documentation.</li>
-              <li>Hash data to a public blockchain by deploying a minimal smart contract to <strong>Sepolia</strong>.</li>
+              <li>Lead tutorials and discussions for 1,000+ students, supporting <strong>ESG integration</strong>, report writing, and research.</li>
+              <li>Teach the value and impact of sustainability initiatives, including <strong>decarbonization</strong> and embodied-carbon <strong>life-cycle assessment (LCA)</strong> reports.</li>
+              <li>Grade 300+ written assignments and provide timely attendance and report feedback.</li>
             </ul>
-            <p class="experience-date">Jan. 2026 – Apr. 2026</p>
+            <p class="experience-date">Jul. 2026 – Present</p>
           </div>
         </article>
       </div>
       </section>
 
+
+       <!-- extracurricular experience subpage-->
       <section id="extracurricular-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="extracurricular-experience-tab" tabindex="0" hidden>
       <div class="experience-list">
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--leadership" aria-hidden="true">
-            <span>🌿</span><small>people &amp; purpose</small>
+          <div class="experience-thumbnail experience-thumbnail--leadership">
+            <img src="assets/experiences/mes-execs26-7.png" alt="McMaster Engineering Society Execs 2026-7">
           </div>
           <div class="experience-info">
             <h3>Vice President, Student Life <span>(previously Director of Sustainability)</span></h3>
@@ -367,8 +412,8 @@
           </div>
         </article>
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--events" aria-hidden="true">
-            <span>🎟️</span><small>bring people together</small>
+          <div class="experience-thumbnail experience-thumbnail--deltahacks">
+            <img src="assets/experiences/dh12.jpg" alt="DeltaHacks 12 Team">
           </div>
           <div class="experience-info">
             <h3>Vice President, Attendee Relations <span>(previously Logistics)</span></h3>
@@ -381,9 +426,10 @@
             <p class="experience-date">Aug. 2024 – Present</p>
           </div>
         </article>
+        
         <article class="experience-card">
-          <div class="experience-thumbnail experience-thumbnail--robotics" aria-hidden="true">
-            <span>🤖</span><small>design &amp; iterate</small>
+          <div class="experience-thumbnail experience-thumbnail--robotics">
+            <img src="assets/experiences/frc7902.png" alt="FRC 7902">
           </div>
           <div class="experience-info">
             <h3>CAD Subteam Member</h3>
@@ -398,7 +444,10 @@
         </article>
       </div>
       </section>
+      
     </dialog>
+    
+    <!--========== INTERESTS SUBPAGE =============-->
     <dialog class="dish-dialog" id="interests-dialog" aria-labelledby="interests-dialog-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Interests window">×</button>
@@ -409,25 +458,31 @@
           <button class="interest-carousel-arrow" type="button" data-carousel-direction="-1" aria-label="Previous hobby">&lt;</button>
           <div class="interest-carousel-slides" aria-live="polite">
             <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
-              <div class="interest-image interest-image--art" role="img" aria-label="Art placeholder image">
-                <span aria-hidden="true">🎨</span>
+              <div class="interest-image interest-image--art">
+                <img src="assets/interests/painting-drain-mural.jpg" alt="Alice painting The Drain mural">
               </div>
-              <h3>Art</h3>
-              <p>A little placeholder for my creative side—sketching, painting, and making things just for fun.</p>
+              <h3>arts n' crafts!</h3>
+              <p>i love painting, sketching, designing both digitally and traditionally. i am greatly inspired by studio ghibli, pinterest, and youtube artists growing up. 
+                in this image you can see me getting commissioned to <strong>paint The Drain (undergraduate student-run engineering store) at McMaster :) </strong> </p>
             </article>
             <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" hidden>
-              <div class="interest-image interest-image--music" role="img" aria-label="Music placeholder image">
-                <span aria-hidden="true">♫</span>
+              <div class="interest-image interest-image--music">
+                <img src="assets/interests/alice-guitar.jpeg" alt="Alice playing guitar">
               </div>
-              <h3>Music</h3>
-              <p>A little placeholder for the songs and sounds I love listening to and discovering.</p>
+              <h3>music!</h3>
+              <p>piano, guitar, ukulele, and singing. <strong>this photo is me playing at a coffeehouse on campus in first year. </strong>
+                i am top 10 mainstream music listeners out there, so you'll always be catching <strong> taylor swift, olivia rodrigo, and sabrina carpenter on my rotation. </strong>
+                i'm also a huge fan of conan gray, laufey, clairo, TWICE, and lyn lapid! and yes...i've seen <em>all </em>of them live in concert before (it might be a problem)
+              </p>
             </article>
             <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" hidden>
-              <div class="interest-image interest-image--gaming" role="img" aria-label="Video gaming placeholder image">
-                <span aria-hidden="true">🎮</span>
+              <div class="interest-image interest-image--gaming">
+                <img src="assets/interests/stardew-valley.jpg" alt="Stardew Valley">
               </div>
-              <h3>Video Gaming</h3>
-              <p>A little placeholder for cozy sessions, fun worlds, and games with friends.</p>
+              <h3>gaming!</h3>
+              <p>i have a concerningly amount of hours logged in stardew valley. i love my indie games! lately i've been into omori, PEAK, it takes two,
+                and the occasional valorant.
+              </p>
             </article>
           </div>
           <button class="interest-carousel-arrow" type="button" data-carousel-direction="1" aria-label="Next hobby">&gt;</button>
@@ -568,6 +623,7 @@
         }
       };
 
+      <!-- checkout counter -->
       const checkoutReceipt = document.querySelector(".checkout-receipt");
       document.querySelectorAll(".dish-cart-button").forEach((button) => {
         button.addEventListener("click", () => {
