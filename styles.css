@@ -394,8 +394,8 @@ a:focus-visible {
 }
 
 .floating-star--title-4 {
-  top: 3%;
-  right: 32%;
+  top: 1%;
+  right: 20%;
   --star-size: 42px;
   --float-delay: -2.2s;
   --float-duration: 5.5s;
@@ -419,10 +419,34 @@ a:focus-visible {
 
 .floating-star--title-7 {
   top: 76%;
-  right: 24%;
+  right: 17%;
   --star-size: 32px;
   --float-delay: -3.4s;
   --float-duration: 4.7s;
+}
+
+.floating-star--title-8 {
+  top: 2%;
+  left: 13%;
+  --star-size: 80px;
+  --float-delay: -2.8s;
+  --float-duration: 5.3s;
+}
+
+.floating-star--title-9 {
+  top: 10%;
+  left: 29%;
+  --star-size: 40px;
+  --float-delay: -1.1s;
+  --float-duration: 6.1s;
+}
+
+.floating-star--title-10 {
+  top: 38%;
+  left: 1%;
+  --star-size: 60px;
+  --float-delay: -3.7s;
+  --float-duration: 4.9s;
 }
 
 @keyframes star-float {
@@ -1276,6 +1300,7 @@ h1 {
 .about-reel {
   width: min(100%, 900px);
   margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  padding-bottom: clamp(3.25rem, 4vw, 3rem);
   overflow: hidden;
 }
 
@@ -1485,17 +1510,23 @@ h1 {
 
 .site-footer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.7rem 1.5rem;
-  padding-block: 1.25rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.25rem 1rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.75rem;
+  text-align: center;
 }
 
 .site-footer p {
   margin-bottom: 0;
+}
+
+.site-footer p:first-child {
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -1553,6 +1584,24 @@ h1 {
     top: 79%;
     right: 22%;
     --star-size: 26px;
+  }
+
+  .floating-star--title-8 {
+    top: -58px;
+    left: 29%;
+    --star-size: 26px;
+  }
+
+  .floating-star--title-9 {
+    top: 8%;
+    left: 25%;
+    --star-size: 28px;
+  }
+
+  .floating-star--title-10 {
+    top: 32%;
+    left: 2%;
+    --star-size: 24px;
   }
 
   .floating-star--about-1 {
