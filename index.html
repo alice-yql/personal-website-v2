@@ -94,9 +94,14 @@
               <button class="floating-star floating-star--title-7 star-blue" type="button" aria-label="Show a cute message">
                 <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
               </button>
-              <button class="floating-star floating-star--title-8 star-yellow" type="button" aria-label="Show a cute message">
+
+              <!-- whispering star -->
+              <button class="floating-star floating-star--title-8 star-yellow" type="button" aria-label="Show a cute message" aria-describedby="star-hint">
                 <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+                <span class="star-hint" id="star-hint" role="note">psssst....hey you....hover over or tap the other stars...
+                  i heard they have things to say to you!</span>
               </button>
+
               <button class="floating-star floating-star--title-9 star-blue" type="button" aria-label="Show a cute message">
                 <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
               </button>
@@ -259,6 +264,7 @@
                   <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="Charlie Puth with friends">
                   <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="having so much fun in logic design">
                   <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="Faculty Frenzy on the grass">
+                
                 </div>
 
                   <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="">
@@ -266,6 +272,7 @@
                   <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="">
                   <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="">
+                
                 </div>
               </div>
             </div>
@@ -537,6 +544,16 @@
       if (!Array.isArray(starMessages) || starMessages.length === 0 || starMessages.some((message) => typeof message !== "string" || message.trim() === "")) {
         throw new Error("star-messages.js must define window.starMessages as a non-empty array of messages.");
       }
+
+      const starHint = document.querySelector("#star-hint");
+      const dismissStarHint = () => {
+        starHint.hidden = true;
+      };
+
+      document.querySelectorAll(".star-field .floating-star").forEach((star) => {
+        star.addEventListener("pointerenter", dismissStarHint, { once: true });
+        star.addEventListener("focus", dismissStarHint, { once: true });
+      });
 
       document.querySelectorAll(".floating-star").forEach((star) => {
         const bubble = star.querySelector(".star-bubble");
