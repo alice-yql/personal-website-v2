@@ -1218,6 +1218,7 @@ h1 {
 
 .experience-media {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   flex: 0 0 40%;
   align-content: start;
   justify-items: center;
