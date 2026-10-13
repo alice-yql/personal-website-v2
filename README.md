@@ -2,6 +2,8 @@
 
 revamping from v.1, changes including proper HTML and CSS formatting and updated experiences as of october 2026.
 
+[check it out here](https://alice-yql.github.io/personal-website-v2/)
+
 `https://alice-yql.github.io/personal-website-v2/`
 
 # 💖 fun features! (oﾟvﾟ)ノ☆*:.｡
