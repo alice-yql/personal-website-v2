@@ -195,6 +195,36 @@ document.querySelectorAll(".dish-cart-button").forEach((button) => {
   });
 });
 
+
+/* ================ COOKIE COUNTER!!!!!!! ================ */
+
+const cookiePlate = document.querySelector(".cookie-plate");
+const cookiePlateImage = cookiePlate.querySelector("img");
+const cookieStatus = document.querySelector(".cookie-status");
+let cookiesRemaining = 3;
+
+cookiePlate.addEventListener("click", () => {
+  if (cookiesRemaining === 0) {
+    return;
+  }
+
+  cookiesRemaining -= 1;
+  cookiePlateImage.src = `assets/contact/cookies${cookiesRemaining}.PNG`;
+
+  if (cookiesRemaining === 0) {
+    cookiePlate.setAttribute("aria-label", "No cookies left");
+    cookiePlate.disabled = true;
+    cookieStatus.textContent = "you ate all the cookies!";
+    return;
+  }
+
+  const cookieText = cookiesRemaining === 1 ? "cookie" : "cookies";
+  cookiePlate.setAttribute("aria-label", `take a cookie, ${cookiesRemaining} ${cookieText} left.`);
+  cookieStatus.textContent = `${cookiesRemaining} ${cookieText} left!`;
+});
+
+/* ============= */
+
 const experienceTabs = [...document.querySelectorAll(".experience-tab")];
 
 experienceTabs.forEach((tab, index) => {

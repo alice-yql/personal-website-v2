@@ -117,7 +117,7 @@
               </button>
             </div>
             <h1 id="hero-title">
-              <img class="hero-title-image" src="assets/decorations/title-portfolio1.PNG" alt="Website title artwork">
+              <img class="hero-title-image" src="assets/decorations/title-portfolio2.PNG" alt="Website title artwork">
             </h1>
           </div>
           <section class="about-preview" id="about" aria-labelledby="about-title">
@@ -132,16 +132,36 @@
                 <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
               </button>
             </div>
+
+            <!--======= ABOUT ========= -->
+
+            <!-- profile pic -->
             <img class="about-image" src="assets/alice-po.jpg" alt="it's a me! alice :D">
             <div class="about-content">
               <h2 id="about-title" class="about-title">
                 <img src="assets/decorations/about-me-text.PNG" alt="About me">
               </h2>
-              <a class="resume-link-image" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">
-                <img src="assets/resume-button1.PNG" alt="Resume">
-              </a>
+              <!-- resume button -->
+              <div class="about-actions">
+                <a class="resume-link-image" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">
+                  <img src="assets/resume-button2.PNG" alt="Resume">
+                </a>
+                <!-- social inks -->
+                <nav class="about-social-links" aria-label="Social links">
+                  <a href="https://github.com/alice-yql" aria-label="GitHub">
+                    <img src="assets/github-logo1.PNG" alt="">
+                  </a>
+                  <a href="https://www.linkedin.com/in/alice-yq-liang/" aria-label="LinkedIn">
+                    <img src="assets/linkedIn-logo1.PNG" alt="">
+                  </a>
+                  <a href="mailto:lianga37@mcmaster.ca" aria-label="Email Alice">
+                    <img src="assets/mail-logo1.PNG" alt="">
+                  </a>
+                </nav>
+              </div>
               <p class="about-description">
-               hey! i'm alice (she/her), <strong>an electrical engineering student @ mcmaster university.</strong> thanks for stopping by my portfolio!
+               hey! i'm alice (she/her), <strong>an electrical engineering student @ mcmaster university.
+               </strong> thanks for stopping by my portfolio!
               </p>
               <p class="about-description">
                 <em>add-ons:</em><br>
@@ -178,7 +198,9 @@
                 <span class="dish-name">projects</span>
                 <span class="dish-hint">things i've built that i love as much as kimchi!</span>
               </button>
-              <button class="resume-button dish-cart-button" type="button" data-cart-item="Projects">add to cart!</button>
+              <button class="dish-cart-button" type="button" data-cart-item="Projects" aria-label="Add projects to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
             </article>
             <article class="dish-card">
               <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
@@ -189,7 +211,9 @@
                 <span class="dish-name">experiences</span>
                 <span class="dish-hint">a mixed board!</span>
               </button>
-              <button class="resume-button dish-cart-button" type="button" data-cart-item="Experiences">add to cart!</button>
+              <button class="dish-cart-button" type="button" data-cart-item="Experiences" aria-label="Add experiences to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
             </article>
             <article class="dish-card">
               <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
@@ -200,7 +224,9 @@
                 <span class="dish-name">interests</span>
                 <span class="dish-hint">when i'm not on the grind :p</span>
               </button>
-              <button class="resume-button dish-cart-button" type="button" data-cart-item="Interests">add to cart!</button>
+              <button class="dish-cart-button" type="button" data-cart-item="Interests" aria-label="Add interests to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
             </article>
           </div>
           
@@ -209,9 +235,17 @@
        <!-- ======= CONTACTS SECTION ======= --> 
         <section class="contact" id="contact" aria-labelledby="contact-title">
           <div class="contact-copy">
-            <p class="section-label">one last step...!</p>
-            <h2 id="contact-title">thanks for 'checking out' alice's portfolio!</h2>
-            <p>here's your order! take a fortune cookie to go :)</p>
+            <!-- <p class="section-label">one last step...!</p> -->
+            <h2 id="contact-title" class="contact-title">
+              <img src="assets/contact/thankyouvisiting1.PNG" alt="Thank you for visiting my website!">
+            </h2>
+            <!-- <p>here's your order! take a fortune cookie to go :)</p> -->
+            <div class="cookie-giveaway">
+              <button class="cookie-plate" type="button" aria-label="Take a cookie, 3 cookies remaining">
+                <img src="assets/contact/cookies3.PNG" alt="">
+              </button>
+              <p class="cookie-status" aria-live="polite">take a homemade cookie to go :p</p>
+            </div>
           </div>
           <div class="checkout-card" aria-label="Cafe checkout">
             <div class="checkout-paper" aria-hidden="true"></div>
@@ -357,6 +391,7 @@
               <li>Hash data to a public blockchain by deploying a minimal smart contract to <strong>Sepolia</strong>.</li>
             </ul>
             <p class="experience-date">Jan. 2026 – Apr. 2026</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
 
@@ -373,6 +408,7 @@
               <li>Manage attendance for 100+ students and support group engagement in design projects.</li>
             </ul>
             <p class="experience-date">Jul. 2025 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
         <article class="experience-card">
@@ -388,6 +424,7 @@
               <li>Monitored participant engagement and consulted Program Directors about concerns.</li>
             </ul>
             <p class="experience-date">Jun. 2026 – Aug. 2026</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
 
@@ -404,6 +441,7 @@
               <li>Grade 300+ written assignments and provide timely attendance and report feedback.</li>
             </ul>
             <p class="experience-date">Jul. 2026 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
       </div>
@@ -426,6 +464,7 @@
               <li>Develop financial plans within a <strong>$60,000+ budget</strong>, including room bookings and material costs.</li>
             </ul>
             <p class="experience-date">Mar. 2026 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
         <article class="experience-card">
@@ -441,6 +480,7 @@
               <li>Support participants at help desks, streamlining check-in and troubleshooting technical issues.</li>
             </ul>
             <p class="experience-date">Aug. 2024 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
         
@@ -457,6 +497,7 @@
               <li>Worked with mentors and teammates to troubleshoot and adapt to game-plan changes.</li>
             </ul>
             <p class="experience-date">Sept. 2023 – Mar. 2024</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
           </div>
         </article>
       </div>

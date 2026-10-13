@@ -758,6 +758,46 @@ h1 {
   outline-offset: 4px;
 }
 
+.about-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.about-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-social-links a {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 8px;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.about-social-links img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.about-social-links a:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+.about-social-links a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
 .now-strip {
   display: flex;
   flex-wrap: wrap;
@@ -836,9 +876,29 @@ h1 {
 }
 
 .dish-cart-button {
-  min-height: 48px;
-  padding: 0.65rem 1rem;
-  font-size: 1rem;
+  width: min(100%, 190px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.dish-cart-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dish-cart-button:hover {
+  filter: brightness(0.95);
+  transform: translateY(-2px);
+}
+
+.dish-cart-button:focus-visible,
+.cookie-plate:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
 }
 
 .cart-confetti-layer {
@@ -1112,6 +1172,10 @@ h1 {
   font-size: 0.82rem;
   font-weight: 800;
   opacity: 0.7;
+}
+
+.experience-link {
+  margin-top: 0.85rem;
 }
 
 .project-link[href] {
@@ -1525,17 +1589,70 @@ h1 {
   box-shadow: 8px 8px 0 rgba(238, 54, 29, 0.16);
 }
 
-.contact h2 {
+.contact-title {
+  position: relative;
+  top: 1.25rem;
+  width: 100%;
   max-width: 520px;
-  margin-bottom: 1rem;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 0.98;
+  margin-bottom: 0;
 }
 
-.contact-copy > p:last-child {
+.contact-title img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-copy > p:not(.section-label) {
   max-width: 390px;
   margin-bottom: 0;
   color: var(--muted);
+  text-align: center;
+}
+
+.contact-copy {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cookie-giveaway {
+  display: grid;
+  justify-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.cookie-plate {
+  width: min(100%, 320px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.cookie-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cookie-plate:not(:disabled):hover {
+  filter: brightness(1.04);
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.cookie-plate:disabled {
+  cursor: default;
+}
+
+.cookie-status {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .checkout-card {
@@ -1779,10 +1896,7 @@ h1 {
   }
 
   .dish-cart-button {
-    min-height: 44px;
-    padding: 0.55rem 0.3rem;
-    font-size: 0.75rem;
-    white-space: nowrap;
+    width: min(100%, 150px);
   }
 
   .contact {
