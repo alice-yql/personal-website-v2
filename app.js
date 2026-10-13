@@ -205,6 +205,8 @@ let cookiesRemaining = 3;
 
 cookiePlate.addEventListener("click", () => {
   if (cookiesRemaining === 0) {
+    cookiePlate.setAttribute("aria-label", "Empty plate, no cookies left");
+    cookieStatus.textContent = "please stop...that's all i got!";
     return;
   }
 
@@ -212,8 +214,7 @@ cookiePlate.addEventListener("click", () => {
   cookiePlateImage.src = `assets/contact/cookies${cookiesRemaining}.PNG`;
 
   if (cookiesRemaining === 0) {
-    cookiePlate.setAttribute("aria-label", "No cookies left");
-    cookiePlate.disabled = true;
+    cookiePlate.setAttribute("aria-label", "Empty plate, no cookies left");
     cookieStatus.textContent = "you ate all the cookies!";
     return;
   }
