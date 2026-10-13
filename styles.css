@@ -1175,7 +1175,7 @@ h1 {
 }
 
 .experience-link {
-  margin-top: 0.85rem;
+  margin-top: 0;
 }
 
 .project-link[href] {
@@ -1216,9 +1216,19 @@ h1 {
   flex-direction: row-reverse;
 }
 
+.experience-media {
+  display: grid;
+  flex: 0 0 40%;
+  align-content: start;
+  justify-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
 .experience-thumbnail {
   display: flex;
-  flex: 0 0 40%;
+  width: 100%;
+  flex: 0 0 auto;
   aspect-ratio: 4 / 3;
   flex-direction: column;
   align-items: center;
@@ -1934,10 +1944,14 @@ h1 {
     flex-direction: column;
   }
 
-  .experience-card .experience-thumbnail {
+  .experience-card .experience-media {
     flex: 0 0 auto;
     width: min(100%, 320px);
     align-self: center;
+  }
+
+  .experience-card .experience-thumbnail {
+    width: 100%;
   }
 
   .experience-card .experience-info {
