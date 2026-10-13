@@ -1,26 +1,29 @@
-# personal-website-v2
-complete revamping!
+# U+2B50 alice's personal website v.2 U+2B50
 
-## Personal website
-
-This is a static site published with GitHub Pages. The public repository is `alice-yql/personal-website-v2`.
-
-Page styles are in `styles.css`, linked from `index.html`.
-
-## Publish the site
-
-The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` publishes the site whenever changes are pushed to `main`. It also supports manual runs from the repository's **Actions** tab. If GitHub Pages has not been enabled for the repository yet, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
-
-After the first successful deployment, the project site is available at:
+revamping from v.1, changes including proper HTML and CSS formatting and updated experiences as of october 2026.
 
 `https://alice-yql.github.io/personal-website-v2/`
 
-The repository is public, so files included in a published deployment—including the resume PDF—are available to anyone.
+# fun features! (' u ')/
 
-## Visitor counter
+### home & header
+- when you hover/click on any of the stars in the home or about page, it will display a randomized messaged for you!
+- all collected messages can be seen in the the `inbox` (envelope) icon in the top right header
 
-The centered header counter uses Visitor Badge's public image endpoint and counts views for this GitHub Pages URL. It requires no account, API key, or browser extension. The count is hosted by a third party and can be affected by automated requests or repeated visits.
+### contact & "checkout" 
+- 'add to cart' buttons adds to the total of the itemized reciept list in the `#contact` "checkout" section
+- yes, you can eat the cookies under the thank you section. but no, you don't have to accept the cookies (pun intended)
 
-## Update the resume
+### note on visitor counter
 
-Replace `assets/Alice_Liang_Resume.pdf` with the updated PDF and keep the same filename. Commit and push the update to `main`; the workflow republishes the site and resume together. If you rename the PDF, change the Resume button link in `index.html` to match.
+counts number of visits but not unique new visits! will be a future update.
+
+## tools used 
+- vs code IDE + copilot 
+- html
+- css
+= javascript 
+- procreate & affinity for assets
+- stack overflow the goat!
+
+# please leave me some feedback/report any bugs you find! greatly appreciate you stopping by my projects :)
