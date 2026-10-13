@@ -119,14 +119,14 @@ a:focus-visible {
   width: 30px;
   height: 30px;
   fill: none;
-  stroke: var(--title-orange);
+  stroke: rgb(250, 168, 135);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
 }
 
 .site-viewer-count {
-  color: var(--title-orange);
+  color: rgb(250, 168, 135);
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
