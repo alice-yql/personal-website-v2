@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e6">
+    <meta name="description" content="Welcome to Alice's Cafe!">
+    <title>alice's portfolio café!</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <div class="top-controls">
+        <details class="site-menu">
+          <summary class="menu-button">
+            <span class="menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span>menu</span>
+          </summary>
+          <nav class="menu-panel" aria-label="Site menu">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <div class="menu-panel-group">
+              <h2 class="menu-panel-heading">main course</h2>
+              <button class="menu-panel-item" type="button" data-dialog="projects-dialog">projects</button>
+              <button class="menu-panel-item" type="button" data-dialog="experiences-dialog">experiences</button>
+              <button class="menu-panel-item" type="button" data-dialog="interests-dialog">interests</button>
+            </div>
+            <a href="#contact">contact</a>
+          </nav>
+        </details>
+
+        <!-- site tracker -->
+        <div class="site-viewer-tracker" role="img" aria-label="Site view count">
+          <svg class="site-viewer-tracker-eye" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path>
+            <circle cx="12" cy="12" r="2.5"></circle>
+          </svg>
+          <span class="site-viewer-count" role="status" aria-label="Loading site view count" aria-live="polite">...</span>
+        </div>
+
+        <nav class="icon-group" aria-label="Quick actions">
+          <a class="icon-group-item" href="#contact" aria-label="Go to checkout">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"></path>
+              <circle cx="10" cy="20" r="1.3"></circle>
+              <circle cx="18" cy="20" r="1.3"></circle>
+            </svg>
+          </a>
+          <details class="inbox-control">
+            <summary class="icon-group-item" aria-label="Open inbox">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </summary>
+            <div class="inbox-panel" aria-labelledby="inbox-title">
+              <h2 id="inbox-title">messages from the universe...</h2>
+              <p class="inbox-empty">explore the stars and thou shall receieve messages in thy inbox!</p>
+              <ul class="inbox-messages" aria-live="polite"></ul>
+            </div>
+          </details>
+          <a class="icon-group-item" href="#about" aria-label="Go to about">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+              <path d="M10 21h4"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+
+      <main id="main">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <div class="hero-intro">
+          
+            <div class="star-field star-field--title" role="group" aria-label="Floating stars. Focus or hover over a star for a cute message.">
+              <button class="floating-star floating-star--title-1 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-2 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-3 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-4 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-5 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-6 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-7 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+
+              <!-- whispering star -->
+              <button class="floating-star floating-star--title-8 star-yellow" type="button" aria-label="Show a cute message" aria-describedby="star-hint">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+                <span class="star-hint" id="star-hint" role="note">psssst....hey you....hover over or tap the other stars...
+                  i heard they have things to say to you!</span>
+              </button>
+
+              <button class="floating-star floating-star--title-9 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--title-10 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+            </div>
+            <h1 id="hero-title">
+              <img class="hero-title-image" src="assets/decorations/title-portfolio2.PNG" alt="Website title artwork">
+            </h1>
+          </div>
+          <section class="about-preview" id="about" aria-labelledby="about-title">
+            <div class="star-field star-field--about" role="group" aria-label="Floating stars. Focus or hover over a star for a cute message.">
+              <button class="floating-star floating-star--about-1 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--about-2 star-blue" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-blue1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+              <button class="floating-star floating-star--about-3 star-yellow" type="button" aria-label="Show a cute message">
+                <img src="assets/decorations/star-yellow1.PNG" alt=""><span class="star-bubble" aria-live="polite"></span>
+              </button>
+            </div>
+
+            <!--======= ABOUT ========= -->
+
+            <!-- profile pic -->
+            <img class="about-image" src="assets/alice-po.jpg" alt="it's a me! alice :D">
+            <div class="about-content">
+              <h2 id="about-title" class="about-title">
+                <img src="assets/decorations/about-me-text.PNG" alt="About me">
+              </h2>
+              <!-- resume button -->
+              <div class="about-actions">
+                <a class="resume-link-image" href="assets/Alice_Liang_Resume.pdf" target="_blank" rel="noopener">
+                  <img src="assets/resume-button2.PNG" alt="Resume">
+                </a>
+                <!-- social inks -->
+                <nav class="about-social-links" aria-label="Social links">
+                  <a href="https://github.com/alice-yql" aria-label="GitHub">
+                    <img src="assets/github-logo1.PNG" alt="">
+                  </a>
+                  <a href="https://www.linkedin.com/in/alice-yq-liang/" aria-label="LinkedIn">
+                    <img src="assets/linkedIn-logo1.PNG" alt="">
+                  </a>
+                  <a href="mailto:lianga37@mcmaster.ca" aria-label="Email Alice">
+                    <img src="assets/mail-logo1.PNG" alt="">
+                  </a>
+                </nav>
+              </div>
+              <p class="about-description">
+               hey! i'm alice (she/her), <strong>an electrical engineering student @ mcmaster university.
+               </strong> thanks for stopping by my portfolio!
+              </p>
+              <p class="about-description">
+                <em>add-ons:</em><br>
+                <span aria-hidden="true">&#x1F336;&#xFE0F;</span>
+                <strong>minor in business<br>
+                <span aria-hidden="true">&#x1F96C;&#xFE0F;</span>
+                concurrent certificate in sustainability</strong>
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section class="work" id="work" aria-labelledby="work-title">
+          <div class="section-heading">
+            <div>
+              <!-- <p class="section-label">A little bit of everything</p> -->
+              <h2 id="work-title" class="work-title">
+                <img src="assets/decorations/main-course-text.PNG" alt="Main course">
+              </h2>
+            </div>
+            <span class="section-label">pick n' choose your fav dish!</span>
+          </div>
+
+          
+          <div class="dish-grid">
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="projects-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--kimchi">
+                  <img class="dish-art-closed" src="assets/kimchi-projects.PNG" alt="">
+                  <img class="dish-art-open" src="assets/kimchi-projects-open.PNG" alt="">
+                </span>
+
+                
+                <span class="dish-name">projects</span>
+                <span class="dish-hint">things i've built that i love as much as kimchi!</span>
+              </button>
+              <button class="dish-cart-button" type="button" data-cart-item="Projects" aria-label="Add projects to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
+            </article>
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--experiences">
+                  <img class="dish-art-closed" src="assets/sushi-experience.PNG" alt="">
+                  <img class="dish-art-open" src="assets/sushi-experience-open.PNG" alt="">
+                </span>
+                <span class="dish-name">experiences</span>
+                <span class="dish-hint">a mixed board!</span>
+              </button>
+              <button class="dish-cart-button" type="button" data-cart-item="Experiences" aria-label="Add experiences to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
+            </article>
+            <article class="dish-card">
+              <button class="dish-button" type="button" data-dialog="interests-dialog" aria-haspopup="dialog">
+                <span class="dish-art dish-art--interests">
+                  <img class="dish-art-closed" src="assets/ramen-interests.svg" alt="">
+                  <img class="dish-art-open" src="assets/ramen-interests-open.svg" alt="">
+                </span>
+                <span class="dish-name">interests</span>
+                <span class="dish-hint">when i'm not on the grind :p</span>
+              </button>
+              <button class="dish-cart-button" type="button" data-cart-item="Interests" aria-label="Add interests to cart">
+                <img src="assets/addtocart-button1.PNG" alt="">
+              </button>
+            </article>
+          </div>
+          
+        </section>
+
+       <!-- ======= CONTACTS SECTION ======= --> 
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+          <div class="contact-copy">
+            <!-- <p class="section-label">one last step...!</p> -->
+            <h2 id="contact-title" class="contact-title">
+              <img src="assets/contact/thankyouvisiting1.PNG" alt="Thank you for visiting my website!">
+            </h2>
+            <!-- <p>here's your order! take a fortune cookie to go :)</p> -->
+            <div class="cookie-giveaway">
+              <button class="cookie-plate" type="button" aria-label="Take a cookie, 3 cookies remaining">
+                <img src="assets/contact/cookies3.PNG" alt="">
+              </button>
+              <p class="cookie-status" aria-live="polite">take a homemade cookie to go :p</p>
+            </div>
+          </div>
+          <div class="checkout-card" aria-label="Cafe checkout">
+            <div class="checkout-paper" aria-hidden="true"></div>
+            <p class="checkout-label">reciept</p>
+            <div class="checkout-receipt" aria-live="polite" aria-relevant="additions text">
+              <div class="checkout-order" data-receipt-item="Projects" data-quantity="2">
+                <span class="checkout-quantity">2 ×</span>
+                <span>projects</span>
+                <span aria-hidden="true">♡</span>
+              </div>
+              <div class="checkout-order" data-receipt-item="Experiences" data-quantity="7">
+                <span class="checkout-quantity">7 ×</span>
+                <span>experiences</span>
+                <span aria-hidden="true">♡</span>
+              </div>
+              <div class="checkout-order" data-receipt-item="Interests" data-quantity="3">
+                <span class="checkout-quantity">3 ×</span>
+                <span>interests</span>
+                <span aria-hidden="true">♡</span>
+              </div>
+            </div>
+            <a class="contact-button" href="mailto:lianga37@mcmaster.ca">
+              <span>send me an emaili!</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <p class="checkout-email">email: lianga37@mcmaster.ca</p>
+          </div>
+        </section>
+
+        <!-- for funshies carousel after the footer -->
+          <section class="about-reel" aria-labelledby="about-reel-title">
+            <h2 id="about-reel-title"></h2> <!--title desc if i feel like it-->
+
+            <div class="about-reel-window">
+              <div class="about-reel-track">
+                <div class="about-reel-set">
+
+                  <img class="about-reel-image" src="assets/about-reel/shad-uleth-fullteam.jpg" alt="Shad ULeth Full Team 2026">
+                  <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="Derek's graduation">
+                  <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="Cake and cafe">
+                  <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="Charlie Puth with friends">
+                  <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="having so much fun in logic design">
+                  <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="Faculty Frenzy on the grass">
+                  <img class="about-reel-image" src="assets/about-reel/alice-shadbot.jpg" alt="Shadbot on Alice's Head">
+                  
+
+                </div>
+
+                  <img class="about-reel-image" src="assets/about-reel/shad-uleth-fullteam.jpg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/cake-cafe.png" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/derek-grad.jpeg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/ff-alice-raisha.jpg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/charlieputh-friends.jpeg" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/eleceng-logiclab.png" alt="">
+                  <img class="about-reel-image" src="assets/about-reel/alice-shadbot.jpg" alt="">
+                
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+
+
+      <!-- ========= FOOTER =========== -->
+      <footer class="site-footer">
+        <p>made with luv, by alice! all art is human-made and hand-drawn :)</p>
+        <p>© <span id="year">2026</span> alice liang <span aria-hidden="true"></span></p>
+      </footer>
+    </div>
+
+    <!----============== PROJECTS DIALOG ============ -->
+    <dialog class="dish-dialog projects-dialog" id="projects-dialog" aria-labelledby="projects-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Projects window">×</button>
+      </form>
+      <h2 id="projects-dialog-title">projects</h2>
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--generalleft">
+            <img src="assets/projects/alice-personal-website-v1-thumbnail.png" alt="Alice's Personal Website, Version 1">
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Personal Project · Jul 2025–Sept 2025</p>
+            <h3>Personal Website v.1</h3>
+            <p>First personal take on web dev! Taught myself HTML, CSS & Javascript in a coding academy and I applied it here. There were a few flexbox 
+              and asset troubles, plus the information is outdated. Thus, V2 (the page you're viewing right now!!) came to be.
+            </p>
+            <a class="project-link" href="https://alice-yql.github.io/Personal-Website-v.1/" target="_blank" rel="noopener noreferrer">view website ↗</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--bear">
+            <img src="assets/projects/bearwithme.jpg" alt="Bear With Me plush companion wearing sunglasses at Hack Western">
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Hack Western 12 · Hardware Developer · Nov 2025</p>
+            <h3>Bear With Me</h3>
+            <p>Built a plush companion for children with speech development needs using a Raspberry Pi 4, responsive speaker, and microphone. Developed its backend with Python, Pygame, ElevenLabs, and the Microsoft Azure API.</p>
+            <a class="project-link" href="https://devpost.com/software/bear-with-me-pg9e02" target="_blank" rel="noopener noreferrer">view devpost ↗</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-thumbnail project-thumbnail--hocus">
+            <img src="assets/projects/1p13projects.png" alt="Hocus Focus engineering design project prototype">
+          </div>
+          <div class="project-info">
+            <p class="project-meta">Integrated Cornerstone Design Projects in Engineering, McMaster · Project Manager · Feb 2024–Apr 2025</p>
+            <h3>Hocus Focus</h3>
+            <p>Led the design of a magnifying tool to support a user with a vision-related need, modeling it in AutoCAD and PrusaSlicer. Coordinated prototyping, fabrication, and quality control through final assembly, then presented at a showcase for 500+ guests.</p>
+            <a class="project-link" href="https://learning-portfolio-2425.notion.site/Project-Three-Power-in-Community-16e63b6970f48182ab1ef8810d00e5f0?pvs=143" target="_blank" rel="noopener noreferrer">view project ↗</a>
+          </div>
+        </article>
+      </div>
+    </dialog>
+
+    <!-- ========= EXPERIENCES SUBPAGE ========= -->
+    <dialog class="dish-dialog experiences-dialog" id="experiences-dialog" aria-labelledby="experiences-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Experiences window">×</button>
+      </form>
+
+      <h2 id="experiences-dialog-title">experiences</h2>
+      <div class="experience-tabs" role="tablist" aria-label="Experience type">
+        <button id="extracurricular-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="false" aria-controls="extracurricular-experience-panel" tabindex="-1">extracurriculars!</button>
+        <button id="work-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="true" aria-controls="work-experience-panel" tabindex="0">work!</button>
+        
+      </div>
+
+      <!--work experience subpage-->
+      <section id="work-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="work-experience-tab" tabindex="0">
+      <div class="experience-list">
+        
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--blockchain">
+            <img src="assets/experiences/cogs-logo.jpg" alt="Community of Guardians Logo">
+          </div>
+          <div class="experience-info">
+            <h3>Software Development Blockchain Intern</h3>
+            <p class="experience-company">Community of Guardians · London, ON</p>
+            <ul>
+              <li>Build blockchain-based verification systems aligned with the <strong>United Nations Sustainable Development Goals (UNSDGs)</strong>.</li>
+              <li>Use <strong>Git</strong> and <strong>GitHub</strong> to implement blockchain security and maintain documentation.</li>
+              <li>Hash data to a public blockchain by deploying a minimal smart contract to <strong>Sepolia</strong>.</li>
+            </ul>
+            <p class="experience-date">Jan. 2026 – Apr. 2026</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--engineering">
+              <img src="assets/experiences/1P13-showcase-2025-news-header.jpg" alt="1p13 showcase">
+          </div>
+          <div class="experience-info">
+            <h3>ENGINEER 1P13: Integrated Cornerstone Design Projects in Engineering Teaching Assistant</h3>
+            <p class="experience-company">McMaster University Faculty of Engineering · Hamilton, ON</p>
+            <ul>
+              <li>Guide first-year engineering students in <strong>Autodesk Inventor</strong>, <strong>Python</strong>, Q-arm, and 3D-printing manufacturing.</li>
+              <li>Grade 50+ project deliverables and reports, providing feedback using <strong>Word</strong> and <strong>Excel</strong>.</li>
+              <li>Manage attendance for 100+ students and support group engagement in design projects.</li>
+            </ul>
+            <p class="experience-date">Jul. 2025 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--shad">
+                <img src="assets/experiences/shad-designday.jpeg" alt="Shad ULeth Design Day">
+          </div>
+          <div class="experience-info">
+            <h3>Engineering Program Facilitator</h3>
+            <p class="experience-company">Shad Canada · Lethbridge, AB</p>
+            <ul>
+              <li>Designed and delivered hands-on workshops introducing students to the <strong>engineering design process</strong>.</li>
+              <li>Mentored project groups of 20+ participants; one team won Best Application of Theme with an <strong>Arduino</strong> prototype.</li>
+              <li>Monitored participant engagement and consulted Program Directors about concerns.</li>
+            </ul>
+            <p class="experience-date">Jun. 2026 – Aug. 2026</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+
+         <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--teaching">
+            <img src="assets/experiences/sustain-tree-planting.png" alt="Tree planting for SUSTAIN">
+          </div>
+          <div class="experience-info">
+            <h3>SUSTAIN 1S03: Introduction to Sustainability Teaching Assistant</h3>
+            <p class="experience-company">McMaster iLead Office · Hamilton, ON</p>
+            <ul>
+              <li>Lead tutorials and discussions for 1,000+ students, supporting <strong>ESG integration</strong>, report writing, and research.</li>
+              <li>Teach the value and impact of sustainability initiatives, including <strong>decarbonization</strong> and embodied-carbon <strong>life-cycle assessment (LCA)</strong> reports.</li>
+              <li>Grade 300+ written assignments and provide timely attendance and report feedback.</li>
+            </ul>
+            <p class="experience-date">Jul. 2026 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+      </div>
+      </section>
+
+
+       <!-- extracurricular experience subpage-->
+      <section id="extracurricular-experience-panel" class="experience-panel" role="tabpanel" aria-labelledby="extracurricular-experience-tab" tabindex="0" hidden>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--leadership">
+            <img src="assets/experiences/mes-execs26-7.png" alt="McMaster Engineering Society Execs 2026-7">
+          </div>
+          <div class="experience-info">
+            <h3>Vice President, Student Life <span>(previously Director of Sustainability)</span></h3>
+            <p class="experience-company">McMaster Engineering Society · Hamilton, ON</p>
+            <ul>
+              <li>Manage and recruit a portfolio of 10 directors and coordinators in a fast-paced, team-oriented environment.</li>
+              <li>Plan school-wide social events and build relationships with other faculties and departments.</li>
+              <li>Develop financial plans within a <strong>$60,000+ budget</strong>, including room bookings and material costs.</li>
+            </ul>
+            <p class="experience-date">Mar. 2026 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--deltahacks">
+            <img src="assets/experiences/dh12.jpg" alt="DeltaHacks 12 Team">
+          </div>
+          <div class="experience-info">
+            <h3>Vice President, Attendee Relations <span>(previously Logistics)</span></h3>
+            <p class="experience-company">DeltaHacks · Hamilton, ON</p>
+            <ul>
+              <li>Evaluate <strong>1,700+ hacker applications</strong> to build a diverse, qualified attendee group.</li>
+              <li>Lead weekly team meetings, communicate objectives, and keep project timelines on track.</li>
+              <li>Support participants at help desks, streamlining check-in and troubleshooting technical issues.</li>
+            </ul>
+            <p class="experience-date">Aug. 2024 – Present</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+        
+        <article class="experience-card">
+          <div class="experience-thumbnail experience-thumbnail--robotics">
+            <img src="assets/experiences/frc7902.png" alt="FRC 7902">
+          </div>
+          <div class="experience-info">
+            <h3>CAD Subteam Member</h3>
+            <p class="experience-company">First Robotics Canada Team 7902 · Markham, ON</p>
+            <ul>
+              <li>Engineered drivetrain and intake systems in <strong>SolidWorks</strong>, including chassis, bearings, and motors.</li>
+              <li>Evaluated material quality for robot manufacturing.</li>
+              <li>Worked with mentors and teammates to troubleshoot and adapt to game-plan changes.</li>
+            </ul>
+            <p class="experience-date">Sept. 2023 – Mar. 2024</p>
+            <button class="project-link experience-link" type="button" disabled>link coming soon ↗</button>
+          </div>
+        </article>
+      </div>
+      </section>
+      
+    </dialog>
+    
+    <!--========== INTERESTS SUBPAGE =============-->
+    <dialog class="dish-dialog" id="interests-dialog" aria-labelledby="interests-dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close Interests window">×</button>
+      </form>
+      <h2 id="interests-dialog-title">interests</h2>
+      <div class="interest-carousel" role="region" aria-roledescription="carousel" aria-label="Hobbies">
+        <div class="interest-carousel-visual">
+          <button class="interest-carousel-arrow" type="button" data-carousel-direction="-1" aria-label="Previous hobby">&lt;</button>
+          <div class="interest-carousel-slides" aria-live="polite">
+            <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <div class="interest-image interest-image--art">
+                <img src="assets/interests/painting-drain-mural.jpg" alt="Alice painting The Drain mural">
+              </div>
+              <h3>arts n' crafts!</h3>
+              <p>i love painting, sketching, designing both digitally and traditionally. i am greatly inspired by studio ghibli, pinterest, and youtube artists growing up. 
+                in this image you can see me getting commissioned to <strong>paint The Drain (undergraduate student-run engineering store) at McMaster :) </strong> </p>
+            </article>
+            <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" hidden>
+              <div class="interest-image interest-image--music">
+                <img src="assets/interests/alice-guitar.jpeg" alt="Alice playing guitar">
+              </div>
+              <h3>music!</h3>
+              <p>piano, guitar, ukulele, and singing. <strong>this photo is me playing at a coffeehouse on campus in first year. </strong>
+                i am top 10 mainstream music listeners out there, so you'll always be catching <strong> taylor swift, olivia rodrigo, and sabrina carpenter on my rotation. </strong>
+                i'm also a huge fan of conan gray, laufey, clairo, TWICE, and lyn lapid! and yes...i've seen <em>all </em>of them live in concert before (it might be a problem)
+              </p>
+            </article>
+            <article class="interest-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" hidden>
+              <div class="interest-image interest-image--gaming">
+                <img src="assets/interests/stardew-valley.jpg" alt="Stardew Valley">
+              </div>
+              <h3>gaming!</h3>
+              <p>i have a concerningly amount of hours logged in stardew valley. i love my indie games! lately i've been into omori, PEAK, it takes two,
+                and the occasional valorant.
+              </p>
+            </article>
+          </div>
+          <button class="interest-carousel-arrow" type="button" data-carousel-direction="1" aria-label="Next hobby">&gt;</button>
+        </div>
+        <p class="interest-carousel-count" aria-hidden="true">1 / 3</p>
+      </div>
+    </dialog>
+    <script src="star-messages.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
