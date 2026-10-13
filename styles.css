@@ -1020,7 +1020,27 @@ h1 {
   text-align: left;
 }
 
-.experiences-dialog > h2 {
+.dialog-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dialog-heading-art {
+  display: block;
+  width: min(100%, 190px);
+  max-height: 18vh;
+  margin-bottom: -0.15rem;
+  object-fit: contain;
+}
+
+.dialog-heading h2 {
+  margin-bottom: 0;
+}
+
+.experiences-dialog .dialog-heading {
   text-align: center;
 }
 
@@ -1054,10 +1074,6 @@ h1 {
 
 .experience-panel[hidden] {
   display: none;
-}
-
-.projects-dialog h2 {
-  text-align: center;
 }
 
 .project-list {

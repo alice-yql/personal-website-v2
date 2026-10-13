@@ -210,7 +210,7 @@
               <button class="dish-button" type="button" data-dialog="experiences-dialog" aria-haspopup="dialog">
                 <span class="dish-art dish-art--experiences">
                   <img class="dish-art-closed" src="assets/sushi-experience.PNG" alt="">
-                  <img class="dish-art-open" src="assets/sushi-experience-open.PNG" alt="">
+                  <img class="dish-art-open" src="assets/decorations/sushi-experience-open.PNG" alt="">
                 </span>
                 <span class="dish-name">experiences</span>
                 <span class="dish-hint">a mixed board!</span>
@@ -255,8 +255,8 @@
             <div class="checkout-paper" aria-hidden="true"></div>
             <p class="checkout-label">reciept</p>
             <div class="checkout-receipt" aria-live="polite" aria-relevant="additions text">
-              <div class="checkout-order" data-receipt-item="Projects" data-quantity="2">
-                <span class="checkout-quantity">2 ×</span>
+              <div class="checkout-order" data-receipt-item="Projects" data-quantity="3">
+                <span class="checkout-quantity">3 ×</span>
                 <span>projects</span>
                 <span aria-hidden="true">♡</span>
               </div>
@@ -325,7 +325,10 @@
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Projects window">×</button>
       </form>
-      <h2 id="projects-dialog-title">projects</h2>
+      <div class="dialog-heading">
+        <img class="dialog-heading-art" src="assets/kimchi-projects-open.PNG" alt="">
+        <h2 id="projects-dialog-title">projects</h2>
+      </div>
       <div class="project-list">
         <article class="project-card">
           <div class="project-thumbnail project-thumbnail--generalleft">
@@ -371,7 +374,10 @@
         <button class="dialog-close" aria-label="Close Experiences window">×</button>
       </form>
 
-      <h2 id="experiences-dialog-title">experiences</h2>
+      <div class="dialog-heading">
+        <img class="dialog-heading-art" src="assets/decorations/sushi-experience-open.PNG" alt="">
+        <h2 id="experiences-dialog-title">experiences</h2>
+      </div>
       <div class="experience-tabs" role="tablist" aria-label="Experience type">
         <button id="extracurricular-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="false" aria-controls="extracurricular-experience-panel" tabindex="-1">extracurriculars!</button>
         <button id="work-experience-tab" class="experience-tab" type="button" role="tab" aria-selected="true" aria-controls="work-experience-panel" tabindex="0">work!</button>
@@ -529,7 +535,10 @@
       <form method="dialog">
         <button class="dialog-close" aria-label="Close Interests window">×</button>
       </form>
-      <h2 id="interests-dialog-title">interests</h2>
+      <div class="dialog-heading">
+        <img class="dialog-heading-art" src="assets/ramen-interests-open.svg" alt="">
+        <h2 id="interests-dialog-title">interests</h2>
+      </div>
       <div class="interest-carousel" role="region" aria-roledescription="carousel" aria-label="Hobbies">
         <div class="interest-carousel-visual">
           <button class="interest-carousel-arrow" type="button" data-carousel-direction="-1" aria-label="Previous hobby">&lt;</button>

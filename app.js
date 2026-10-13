@@ -37,6 +37,9 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   });
 }
 
+
+// ========== STAR MESSAGES ===========
+
 const starMessages = window.starMessages;
 if (!Array.isArray(starMessages) || starMessages.length === 0 || starMessages.some((message) => typeof message !== "string" || message.trim() === "")) {
   throw new Error("star-messages.js must define window.starMessages as a non-empty array of messages.");
@@ -106,6 +109,8 @@ document.querySelectorAll(".dish-button, .menu-panel-item").forEach((button) => 
   });
 });
 
+/* === interests carousel === */
+
 const interestCarousel = document.querySelector(".interest-carousel");
 const interestSlides = [...interestCarousel.querySelectorAll(".interest-slide")];
 const interestCarouselCount = interestCarousel.querySelector(".interest-carousel-count");
@@ -131,6 +136,9 @@ interestCarousel.addEventListener("keydown", (event) => {
     showInterestSlide(activeInterestSlide + (event.key === "ArrowRight" ? 1 : -1));
   }
 });
+
+
+/* ======= add to cart confetti ======== */
 
 const confettiLayer = document.createElement("div");
 confettiLayer.className = "cart-confetti-layer";
@@ -158,7 +166,7 @@ const burstConfetti = (button) => {
   }
 };
 
-// Checkout counter
+// Checkout counter ==========
 const checkoutReceipt = document.querySelector(".checkout-receipt");
 document.querySelectorAll(".dish-cart-button").forEach((button) => {
   button.addEventListener("click", () => {

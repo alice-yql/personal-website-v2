@@ -28,4 +28,4 @@ counts number of visits but not unique new visits! will be a future update.
 - procreate & affinity for assets
 - stack overflow the goat!
 
-# please leave me some feedback/report any bugs you find! greatly appreciate you stopping by my projects :)
+# please leave me some feedback/report any bugs you find! greatly appreciate you stopping by my project :)
