@@ -24,7 +24,7 @@ counts number of visits but not unique new visits! will be a future update.
 - vs code IDE + copilot 
 - html
 - css
-= javascript 
+- javascript 
 - procreate & affinity for assets
 - stack overflow the goat!
 
