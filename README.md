@@ -2,7 +2,7 @@
 
 revamping from v.1, changes including proper HTML and CSS formatting and updated experiences as of october 2026.
 
-[check it out here](https://alice-yql.github.io/personal-website-v2/)
+[check it out here!](https://alice-yql.github.io/personal-website-v2/)
 
 `https://alice-yql.github.io/personal-website-v2/`
 
@@ -24,7 +24,7 @@ counts number of visits but not unique new visits! will be a future update.
 - vs code IDE + copilot 
 - html
 - css
-= javascript 
+- javascript 
 - procreate & affinity for assets
 - stack overflow the goat!
 
