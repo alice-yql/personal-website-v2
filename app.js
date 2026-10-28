@@ -37,6 +37,12 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   });
 }
 
+// ========== LOADING SCREEN ========
+
+var loadingScreen = document.querySelector(".loadingScreen");
+window.addEventListener('load', function() {
+  loadingScreen.style.display = 'none';
+})
 
 // ========== STAR MESSAGES ===========
 

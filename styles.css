@@ -19,6 +19,18 @@
   box-sizing: border-box;
 }
 
+.loadingScreen {
+  position: absolute;
+  z-index: 7;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--paper);
+  background-image: url("assets/beige-texture-background1.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 html {
   scroll-behavior: smooth;
 }
