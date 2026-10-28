@@ -4,7 +4,9 @@ revamping from v.1, changes including proper HTML and CSS formatting and updated
 
 [check it out here!](https://alice-yql.github.io/personal-website-v2/)
 
-`https://alice-yql.github.io/personal-website-v2/`
+`https://alice-yql.com`
+<!-- `https://alice-yql.github.io/personal-website-v2/` -->
+
 
 # 💖 fun features! (oﾟvﾟ)ノ☆*:.｡
 
